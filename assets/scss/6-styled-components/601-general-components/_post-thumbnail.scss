@@ -1,0 +1,34 @@
+:root {
+    --post-thumbnail-height-desktop: 500px;
+    --post-thumbnail-height-tablet: 400px;
+    --post-thumbnail-height-smartphone: 300px;
+}
+
+.post-thumbnail {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.single .post-thumbnail,
+.page .post-thumbnail {
+    height: var(--post-thumbnail-height-smartphone);
+    margin-bottom: 1rem;
+}
+
+// var(--max-width-text) + marge (2*2rem) = 600px + (4+16px) = 664px
+@media only screen and (min-width: 664px) {
+    .single .post-thumbnail,
+    .page .post-thumbnail {
+        height: var(--post-thumbnail-height-tablet);
+    }
+}
+
+@media only screen and (min-width: $mq-large) {
+    .single .post-thumbnail,
+    .page .post-thumbnail {
+        height: var(--post-thumbnail-height-desktop);
+    }
+}

@@ -1,0 +1,82 @@
+/**
+ *  Custom code written for plugin The Events Calendar Pro 5.2.1.1 by Modern Tribe, Inc.
+ *  
+ *  Settings on Basic Styles
+ *  Plugin template files heavily modified in <theme>/tribe/events/v2
+ */
+
+
+/* Archive of concerts, starting point: list.php */
+
+.post-type-archive-tribe_events main {
+    margin: 2rem 2rem 0 2rem;
+}
+
+.post-type-archive-tribe_events .article-header {
+    display: none;
+}
+
+.post-type-archive-tribe_events main article {
+    margin: 0 auto 2rem auto;
+    max-width: var(--max-width-text);
+}
+
+// border and padding for concert
+.tribe-events-calendar-list__event-details {
+    border: 1px solid var(--grey-lighter);
+    padding: 1rem;
+}
+
+// date and time displays only start time
+.tribe-events-calendar-list__event-datetime {
+    color: var(--diap-color);
+    .tribe-event-date-start {
+        display: inline;
+        color: var(--paragraph-color);
+    }
+}
+
+// concert category
+.fngl-tribe-hack-categories {
+    a {
+        background-color: var(--eiklinde-paars);
+        display: inline;
+        margin-right: .25rem;
+        padding: 0.125rem .5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: var(--line-height-paragraph);
+        font-size: var(--font-size-xs);
+        color: var(--diap-color);
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+// concert title 
+.tribe-events-calendar-list__event-title {
+    a {
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-large);
+        font-weight: var(--font-weight-bold);
+        color: var(--eiklinde-paars);
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// venue title in bold with extra space 
+.tribe-events-calendar-list__event-venue-title {
+    font-weight: var(--font-weight-bold);
+    margin-right: .25rem;
+}
+
+// concert description
+.tribe-events-calendar-list__event-description {
+    p {
+        margin: 0
+    }
+}

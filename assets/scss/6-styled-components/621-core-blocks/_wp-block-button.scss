@@ -1,0 +1,71 @@
+.wp-block-button {
+    color: #fff;
+}
+
+.wp-block-button.aligncenter {
+    text-align: center;
+}
+
+.wp-block-button.alignright {
+    /*rtl:ignore*/
+    text-align: right;
+}
+
+.wp-block-button__link {
+    background-color: #32373c;
+    border: none;
+    border-radius: 28px;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:active,
+.wp-block-button__link:visited {
+    color: inherit;
+}
+
+.wp-gs .wp-block-button__link:not(.has-background) {
+    background-color: var(--wp-block-core-button--color--background, var(--wp-color--primary, #32373c));
+}
+
+.is-style-squared .wp-block-button__link {
+    border-radius: 0;
+}
+
+.no-border-radius.wp-block-button__link {
+    border-radius: 0 !important;
+}
+
+.is-style-outline {
+    color: #32373c;
+}
+
+.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 2px solid;
+}
+
+.wp-block-buttons .wp-block-button {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.wp-block-buttons.alignright .wp-block-button {
+    margin-right: none;
+    margin-left: 8px;
+}
+
+.wp-block-buttons.aligncenter {
+    text-align: center;
+}

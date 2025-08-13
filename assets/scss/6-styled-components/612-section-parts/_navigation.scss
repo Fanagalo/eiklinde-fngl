@@ -1,0 +1,227 @@
+:root {
+    --menu-bg-color: var(--primary-dark);
+    --menu-bg-hover-color: var(--primary-light);
+    --menu-border: transparent;
+    --menu-text-color: var(--white);
+    --menu-text-hover-color: var(--white);
+    --menu-font-size: var(--font-size-paragraph);
+    --submenu-bg-color: var(--primary-light);
+    --submenu-bg-hover-color: var(--primary-lighter);
+    --submenu-font-size: var(--font-size-small);
+}
+
+.nav-area {
+    display: grid;
+}
+
+#site-navigation {
+    border: none;
+    height: auto;
+    margin: 0;
+    a {
+        color: var(--menu-text-color);
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li:hover>a {
+        // this declares the color of the menu text when a submenu is focused
+        color: var(--menu-text-color);
+    }
+}
+
+
+/*
+ * Mobile menu (hamburger)
+ * Consider different media-query with keyword "only"
+ * @media only screen and (max-width: $mq-medium) {
+ */
+
+@media screen and (max-width: $mq-medium) {
+    #site-navigation {
+        display: none; // toggle "none" to "block" to show menu permanently
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        background-color: var(--menu-bg-color);
+        z-index: 99;
+    }
+    .nav-area {
+        .menu,
+        .sub-menu {
+            margin: 0;
+            margin: 1rem;
+        }
+        .menu {
+            border-bottom: 1px solid var(--menu-border);
+        }
+        .menu-item {
+            background-color: var(--menu-bg-color);
+            border-top: 1px solid var(--menu-border);
+            overflow: hidden;
+            a {
+                display: block;
+                padding: .5rem 1rem;
+            }
+        }
+        .menu>.menu-item:first-of-type {
+            // border-top: none;
+        }
+        .sub-menu {
+            display: none;
+            margin: 0; // crucial code
+        }
+        .menu-toggle {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0 0 2rem 2rem;
+            outline: none;
+            text-align: right;
+            cursor: pointer;
+            z-index: 999;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background: no-repeat left var(--hamburger);
+                background-size: cover;
+            }
+            &.activated::before {
+                content: "";
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background: no-repeat left var(--cross);
+                background-size: cover;
+            }
+        }
+        .sub-menu-toggle {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 0 .5rem 0rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            z-index: 999;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background: no-repeat left var(--arrow-right);
+                background-size: cover;
+            }
+            &.activated::before {
+                content: "";
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                width: 24px;
+                height: 24px;
+                background: no-repeat left var(--arrow-down);
+                background-size: cover;
+            }
+        }
+        .sub-menu .sub-menu-toggle {
+            padding: 0 .5rem 0 0;
+        }
+        .menu-item-has-children {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "button anchor" ". sub-menu";
+            a {
+                padding-left: 0;
+                grid-area: anchor;
+            }
+            button {
+                grid-area: button;
+            }
+            .sub-menu {
+                grid-area: sub-menu;
+                max-width: 100vw;
+                overflow: hidden;
+            }
+        }
+    }
+} // end of Mobile menu media-query
+
+/*
+ * Desktop menu 
+ */
+
+@media only screen and (min-width: $mq-medium) {
+    .nav-area {
+        .menu-toggle,
+        .sub-menu-toggle {
+            display: none;
+        }
+        .menu {
+            margin: 0 auto;
+            max-width: var(--max-width-container);
+        }
+        .menu>.menu-item {
+            display: inline-block;
+        }
+        .menu-item {
+            background-color: var(--menu-bg-color);
+            display: block;
+            a {
+                color: var(--paragraph-color);
+                display: inline-block;
+                padding: .5em 1em .5em 1em;
+                font-size: var(--menu-font-size);
+                line-height: var(--line-height-xs);
+            }
+        }
+        .menu-item:hover,
+        .menu-item a:hover,
+        .menu-item a:active {
+            background-color: var(--menu-bg-hover-color);
+            color: var(--menu-text-hover-color) !important;
+        }
+        .menu>.menu-item-has-children>a::after {
+            content: " \f107";
+            font-family: FontAwesome;
+            line-height: 1;
+        }
+        .menu>.menu-item-has-children:hover>.sub-menu {
+            background: var(--menu-bg-hover-color);
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            width: 250px;
+            border-bottom: 1px solid var(--menu-border);
+            z-index: 2;
+        }
+        .sub-menu {
+            display: none;
+            a {
+                color: var(--paragraph-color);
+                font-size: var(--submenu-font-size);
+                padding: .5em 1em .5em 1em;
+            }
+            .menu-item,
+            .sub-menu {
+                background-color: var(--submenu-bg-color);
+                display: block;
+                border-top: 1px solid var(--menu-border);
+            }
+            .menu-item {
+                &:first-of-type {
+                    border-top: none;
+                }
+                a:hover,
+                a:active {
+                    background-color: var(--submenu-bg-hover-color);
+                    color: var(--menu-text-color-hover);
+                }
+            }
+        }
+    }
+}

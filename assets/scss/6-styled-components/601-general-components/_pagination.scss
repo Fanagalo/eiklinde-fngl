@@ -1,0 +1,50 @@
+:root {
+    --pagination-background-color: transparent;
+}
+
+.nav-links {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 1em
+}
+
+.nav-previous,
+.nav-next {
+    grid-column: 1/3;
+    background-color: var(--pagination-background-color);
+    padding: .5em 1.75em;
+}
+
+@media screen and (min-width: $mq-medium) {
+    .nav-previous {
+        grid-column: 1/2;
+    }
+    .nav-next {
+        grid-column: 2/3;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-next {
+    text-align: right;
+}
+
+.nav-previous a:before {
+    content: "\f053";
+    font-family: FontAwesome;
+    margin-left: -1.25em;
+    float: left;
+}
+
+.nav-next a:after {
+    content: "\f054";
+    font-family: FontAwesome;
+    margin-right: -1.25em;
+    float: right;
+}

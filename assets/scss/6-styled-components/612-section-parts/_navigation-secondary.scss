@@ -1,0 +1,66 @@
+@media only screen and (max-width: $mq-medium) {
+    .nav-area-secondary {
+        // the secondary menu is not shown on smaller devices
+        display: none;
+    }
+}
+
+@media only screen and (min-width: $mq-medium) {
+    .nav-area-secondary * {
+        // this solution is quite hack-ish
+        display: inline;
+        margin: 0;
+    }
+    .secondary-navigation {
+        .menu-item {
+            background: transparent;
+            &:hover,
+            a:hover,
+            a:active {
+                background: transparent;
+            }
+            ul {
+                display: none;
+            }
+        }
+        /* a submenu will be ignored */
+        .menu-item-has-children>a::after {
+            content: "";
+        }
+        .menu-item-has-children:hover>.sub-menu {
+            display: none;
+        }
+        a {
+            font-size: var( --font-size-small);
+            color: var(--primary-lightest);
+            text-decoration: none;
+            padding: .5rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .nav-area-secondary {
+        .search-form-top {
+            margin-left: 1rem;
+            input[type="search"] {
+                font-size: var(--font-size-small);
+                line-height: var(--line-height-xs);
+                background-color: transparent;
+                color: var(--primary-lightest);
+                border-radius: 0;
+                border: 1px solid var(--primary-lighter);
+                &::placeholder {
+                    opacity: 1; // the text seems opaque without this addition
+                }
+                &:focus {
+                    background-color: var(--white);
+                    color: var(--paragraph-color);
+                }
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+/*!
+ Theme Name: Eik en Linde FNGL 2021 
+ Theme URI: https://fanagalo.nl
+ Author: Jaap Wiering
+ Author URI: https://fanagalo.nl
+ Description: Eik en Linde theme built on fngl_s-core 0.77
+ Version: 0.92
+ License: GNU General Public License v2 or later
+ Text Domain: eiklinde-fngl-2021
+/* 
+
+/*
+  Theme coding based on Underscores
+  Inspired by Sami Keijonen wcnordic2019-master theme https://github.com/samikeijonen/wcnordic-2019
+  Structure based on ITCSS
+*/
+
+/*--------------------------------------------------------------
+# 1. Global variables (ITCSS settings)
+
+Config switches.
+
+Future expansions: 
+- fonts.scss          => declaration of @font-face 
+- spacing.scss        => spacing variables
+- transitions.scss    => transition variables
+--------------------------------------------------------------*/
+
+@import "1-global-variables/_colors.scss";
+@import "1-global-variables/_svg.scss";
+@import "1-global-variables/_typography.scss";
+@import "1-global-variables/_width.scss";
+
+/*--------------------------------------------------------------
+# 2. Mixins and functions (ITCSS tools)
+
+Default mixins and functions
+--------------------------------------------------------------*/
+
+@import "2-mixins-functions/_mixins.scss";
+
+/*--------------------------------------------------------------
+# 3. Resets (ITCSS generic)
+
+Ground-zero styles (resets, box-sizing, etc.).
+--------------------------------------------------------------*/
+
+@import "3-resets/_normalize.scss";
+@import "3-resets/_box-sizing.scss";
+
+/*--------------------------------------------------------------
+# 4. HTML Elements
+
+Unclassed HTML elements (type selectors).
+--------------------------------------------------------------*/
+
+@import "4-html-elements/_html-body.scss";
+@import "4-html-elements/_address.scss";
+@import "4-html-elements/_blockquote.scss";
+@import "4-html-elements/_forms-buttons.scss";
+@import "4-html-elements/_headings.scss";
+@import "4-html-elements/_hr.scss";
+@import "4-html-elements/_links.scss";
+@import "4-html-elements/_lists.scss";
+@import "4-html-elements/_media.scss";
+@import "4-html-elements/_inline-text.scss";
+@import "4-html-elements/_paragraph.scss";
+@import "4-html-elements/_pre-code.scss";
+@import "4-html-elements/_tables.scss";
+@import "4-html-elements/_obsolete.scss";
+
+/*--------------------------------------------------------------
+# 5. structure objects (ITCSS objects)
+
+Objects & Layouts - Undecorated design patterns.
+
+Future expansions: 
+- animations.scss    => 
+- flow-spacing.scss  => 
+- layouts.scss       => declaration of grid 
+- max-width.scss     => 
+- svg.scss           => 
+--------------------------------------------------------------*/
+
+@import "5-structure-objects/_wireframes.scss";
+@import "5-structure-objects/_sidebar.scss";
+
+/*--------------------------------------------------------------
+# 6. styled components (ITCSS components)
+
+Components - specific UI components, like: accordions, ...
+--------------------------------------------------------------*/
+
+@import "6-styled-components/601-general-components/_article-classes.scss";
+@import "6-styled-components/601-general-components/_gallery.scss";
+@import "6-styled-components/601-general-components/_page-classes.scss";
+@import "6-styled-components/601-general-components/_pagination.scss";
+@import "6-styled-components/601-general-components/_post-thumbnail.scss";
+@import "6-styled-components/601-general-components/_wp-media.scss";
+
+/*--------------------------------------------------------------
+### 602. Widgets
+--------------------------------------------------------------*/
+
+@import "6-styled-components/602-widgets/_widget-general.scss";
+@import "6-styled-components/602-widgets/_widget-html-social-media.scss";
+@import "6-styled-components/602-widgets/_widget-nav-menu.scss";
+
+/*--------------------------------------------------------------
+### 611. Page templates
+--------------------------------------------------------------*/
+
+@import "6-styled-components/611-page-templates/_page.scss"; // should be before _front-page.scss
+@import "6-styled-components/611-page-templates/_404.scss";
+@import "6-styled-components/611-page-templates/_archive.scss";
+@import "6-styled-components/611-page-templates/_front-page.scss";
+@import "6-styled-components/611-page-templates/_index.scss";
+@import "6-styled-components/611-page-templates/_search.scss";
+@import "6-styled-components/611-page-templates/_single.scss";
+
+/*--------------------------------------------------------------
+### 612. Section partials
+
+Header, comments, sidebar, footer
+--------------------------------------------------------------*/
+
+@import "6-styled-components/612-section-parts/_header.scss";
+@import "6-styled-components/612-section-parts/_navigation.scss";
+@import "6-styled-components/612-section-parts/_navigation-secondary.scss";
+@import "6-styled-components/612-section-parts/_comments.scss";
+@import "6-styled-components/612-section-parts/_footer.scss";
+@import "6-styled-components/612-section-parts/_searchform.scss";
+
+/*--------------------------------------------------------------
+### 613. Content parts
+
+Found in template-parts folder
+--------------------------------------------------------------*/
+
+@import "6-styled-components/613-content-parts/_content.scss";
+@import "6-styled-components/613-content-parts/_content-archive.scss";
+@import "6-styled-components/613-content-parts/_content-page.scss";
+@import "6-styled-components/613-content-parts/_content-search.scss";
+@import "6-styled-components/613-content-parts/_content-none.scss";
+
+/*--------------------------------------------------------------
+### 621. Core Blocks - editor related styles.
+
+Based on WordPress 5.4.1 = Block Editor versie 7.5 (+ bug fixes 7.6)
+Composed on 20200518
+
+Reminder: disable loading default CSS with
+  wp_dequeue_style( 'wp-block-library' );
+  wp_dequeue_style( 'wp-block-library-theme' );
+in functions.php
+--------------------------------------------------------------*/
+
+/* Common Blocks */
+
+@import "6-styled-components/621-core-blocks/_wp-block-audio.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-cover.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-file.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-gallery.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-image.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-quote.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-video.scss";
+
+/* Formatting */
+
+@import "6-styled-components/621-core-blocks/_wp-block-pullquote.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-table.scss";
+// @import "6-styled-components/621-core-blocks/_wp-block-preformatted.scss"; // only a CSS class, design from HTML element
+// @import "6-styled-components/621-core-blocks/_wp-block-code.scss"; // only a CSS class, design from HTML element
+// @import "6-styled-components/621-core-blocks/_wp-block-verse.scss"; // only a CSS class, design from HTML element
+
+/* Layout Elements */
+
+@import "6-styled-components/621-core-blocks/_wp-block-button.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-columns.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-media-text.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-separator.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-spacer.scss";
+
+/* Widgets */
+
+@import "6-styled-components/621-core-blocks/_wp-block-calendar.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-categories.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-latest-comments.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-latest-posts.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-rss.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-search.scss";
+@import "6-styled-components/621-core-blocks/_wp-block-social-links.scss";
+
+/* Embeds */
+
+@import "6-styled-components/621-core-blocks/_wp-block-embed.scss";
+
+/* Miscelanious */
+
+// @import "6-styled-components/621-core-blocks/_wp-block-navigation.scss"; // not yet implemented in WordPress 5.4.1
+
+/* Extras */
+
+// @import "6-styled-components/621-core-blocks/_wp-block-subhead.scss"; // deprecated in Gutenberg 3.9.0
+// @import "6-styled-components/621-core-blocks/_wp-block-text-columns.scss"; // deprecated in Gutenberg 3.5.0
+@import "6-styled-components/621-core-blocks/_has-color.scss";
+@import "6-styled-components/621-core-blocks/_has-drop-cap.scss";
+@import "6-styled-components/621-core-blocks/_has-font-size--is-text.scss";
+@import "6-styled-components/621-core-blocks/_has-text-align.scss";
+
+/*--------------------------------------------------------------
+# Custom Blocks - editor related styles.
+--------------------------------------------------------------*/
+
+@import "6-styled-components/622-custom-blocks/_caption.scss";
+// @import "6-styled-components/622-custom-blocks/_columns.scss";
+@import "6-styled-components/622-custom-blocks/_edit-link.scss";
+
+/*--------------------------------------------------------------
+# Shortcodes
+--------------------------------------------------------------*/
+
+@import "6-styled-components/640-shortcodes/_fngl_recent_posts.scss";
+
+/*--------------------------------------------------------------
+# Vendor styles
+--------------------------------------------------------------*/
+
+@import "6-styled-components/650-vendor/_the-events-calendar.scss";
+@import "6-styled-components/650-vendor/_cookie-notice.scss";
+@import "6-styled-components/650-vendor/_events-manager.scss";
+
+/*--------------------------------------------------------------
+# 7. overrides (ITCSS trumps)
+
+Utilities - Helpers and overrides.
+The dirty layer, with overrides and !important
+
+Future expansions: 
++ accessibility.scss           =>
++ alignment.scss               =>
+- color-palette.scss           =>
+- font-sizes.scss              =>
+- helpers.scss                 =>
+- max-width.scss               =>
+- prefers-reduced-motion.scss  =>
+- spacing.scss                 =>
+- text.scss                    =>
+--------------------------------------------------------------*/
+
+@import "7-overrides/_accessibility.scss";
+@import "7-overrides/_align-left-center-right.scss";
+@import "7-overrides/_align-wide-full.scss";
+@import "7-overrides/_boxed.scss";
+@import "7-overrides/_hide-full-elements.scss";

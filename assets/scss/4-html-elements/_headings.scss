@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-styling;
+    line-height: var(--line-height-paragraph);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-xl);
+    margin-bottom: var(--line-height-paragraph);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-large);
+}
+
+h3 {
+    font-weight: var(--font-weight-sub);
+    font-size: var(--font-size-large);
+}
+
+h4 {
+    font-size: var(--font-size-medium);
+}
+
+h5 {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-xs);
+}
+
+h6 {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-xs);
+}

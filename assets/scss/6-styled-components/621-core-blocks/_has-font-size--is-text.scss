@@ -1,0 +1,37 @@
+.is-small-text {
+    font-size: var(--font-size-small);
+}
+
+.is-regular-text {
+    font-size: var(--font-size-paragraph);
+}
+
+.is-large-text {
+    font-size: var(--font-size-large);
+}
+
+.is-larger-text {
+    font-size: var(--font-size-xl);
+}
+
+.has-small-font-size {
+    font-size: var(--font-size-small);
+}
+
+.has-regular-font-size,
+.has-normal-font-size {
+    font-size: var(--font-size-paragraph);
+}
+
+.has-medium-font-size {
+    font-size: var(--font-size-medium);
+}
+
+.has-large-font-size {
+    font-size: var(--font-size-large);
+}
+
+.has-larger-font-size,
+.has-huge-font-size {
+    font-size: var(--font-size-xl);
+}

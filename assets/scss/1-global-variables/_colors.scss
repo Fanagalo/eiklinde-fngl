@@ -1,0 +1,50 @@
+:root {
+    /* brand colors */
+    --eiklinde-paars: hsl(300, 82%, 28%);
+    --eiklinde-blauw: hsl(210, 100%, 45%);
+    --eiklinde-rood: hsl(0, 100%, 40%);
+    /* color scheme */
+    /* note: this must be HexRGB, RGB(A) or HSL(A); CSS Variable won't work */
+    $primary-color: hsl(300, 82%, 28%);
+    $secondary-color: hsl(0, 0%, 50%);
+    $tertiary-color: hsl(0, 100%, 40%);
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --tertiary-color: #{$tertiary-color};
+    /* text colors */
+    --paragraph-color: hsl(0, 0%, 27%);
+    --heading-color: var(--eiklinde-paars);
+    --a-color: hsl(210, 100%, 60%);
+    --a-hover-color: hsl(210, 100%, 30%);
+    /* interaction colors */
+    --error-color: #d00;
+    --warning-color: #f90;
+    --mark-color: #fd0;
+    --success-color: #0b0;
+    /* synonyms */
+    --diap-color: var(--white);
+    /* primary tints */
+    --primary-lightest: #{mix(white, $primary-color, 75%)};
+    --primary-lighter: #{mix(white, $primary-color, 50%)};
+    --primary-light: #{mix(white, $primary-color, 25%)};
+    --primary-dark: #{mix(black, $primary-color, 25%)};
+    --primary-darker: #{mix(black, $primary-color, 50%)};
+    --primary-darkest: #{mix(black, $primary-color, 75%)};
+    /* mix over black and white */
+    --white: #{mix(white, $secondary-color, 100%)};
+    --grey-lightest: #{mix(white, $secondary-color, 75%)};
+    --grey-lighter: #{mix(white, $secondary-color, 50%)};
+    --grey-light: #{mix(white, $secondary-color, 25%)};
+    --grey-middle: #{$secondary-color};
+    --grey-dark: #{mix(black, $secondary-color, 25%)};
+    --grey-darker: #{mix(black, $secondary-color, 50%)};
+    --grey-darkest: #{mix(black, $secondary-color, 75%)};
+    --black: #{mix(black, $secondary-color, 100%)};
+    /* tertiary tints */
+    --tertiary-lightest: #{mix(white, $tertiary-color, 75%)};
+    --tertiary-lighter: #{mix(white, $tertiary-color, 50%)};
+    --tertiary-light: #{mix(white, $tertiary-color, 25%)};
+    --tertiary-dark: #{mix(black, $tertiary-color, 25%)};
+    --tertiary-darker: #{mix(black, $tertiary-color, 50%)};
+    --tertiary-darkest: #{mix(black, $tertiary-color, 75%)};
+}

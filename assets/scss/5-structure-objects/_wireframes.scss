@@ -1,0 +1,143 @@
+/* Variables */
+
+:root {
+    /* layouts */
+    --general-bg: var(--white);
+    /* header */
+    --header-full-bg: var(--eiklinde-paars);
+    --header-area-bg: var(--eiklinde-paars);
+    /* menu */
+    --nav-area-bg: var(--eiklinde-paars);
+    /* main content */
+    --main-area-bg: var(--white);
+    /* sidebar */
+    --sidebar-area-bg: var(--eiklinde-paars);
+    /* footer */
+    --footer-full-bg: var(--black);
+    --footer-area-bg: var(--black);
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header" "main" "aside" "footer";
+    grid-template-rows: auto auto 1fr auto auto;
+}
+
+@media screen and (min-width: $mq-medium) {
+    body {
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-columns: auto 800px auto;
+        grid-template-areas: " header header header" "main main main" "aside aside aside" "footer footer footer ";
+    }
+}
+
+@media screen and (min-width: $mq-large) {
+    body {
+        grid-template-columns: auto 120px 800px 120px auto;
+        grid-template-areas: " . header  header  header . " " main-left main main main main-right " " aside-left aside aside aside aside-right " " . footer footer footer . ";
+    }
+}
+
+
+/* full width backgrounds */
+
+.header-full-bg,
+.footer-full-bg {
+    grid-column: 1 / -1;
+    z-index: -1;
+}
+
+
+/* header */
+
+.header-full-bg {
+    grid-row: 1 / 2;
+    background: var(--header-full-bg);
+}
+
+.header-area {
+    grid-area: header;
+    background: var(--header-area-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo nav-bottom";
+    padding: 1.5rem 2rem;
+}
+
+.header-logo {
+    grid-area: logo;
+}
+
+.nav-area {
+    grid-area: nav-bottom;
+    align-self: start;
+    justify-self: right;
+}
+
+@media screen and (min-width: $mq-medium) {
+    .header-area {
+        grid-template-columns: 200px auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "logo nav-top" "logo nav-bottom";
+    }
+    .nav-area {
+        background: var(--nav-area-bg);
+        align-self: end;
+    }
+    .nav-area-secondary {
+        grid-area: nav-top;
+        align-self: start;
+        justify-self: right;
+    }
+}
+
+
+/* main */
+
+.main-left {
+    background: url('images/background-gradient-left.svg') right repeat-y, var(--white);
+    grid-area: main-left;
+}
+
+.main-area {
+    background: var(--main-area-bg);
+    grid-area: main;
+}
+
+.main-right {
+    background: url('images/background-gradient-right.svg') left repeat-y, var(--white);
+    grid-area: main-right;
+}
+
+
+/* sidebar */
+
+.sidebar-left {
+    background: #f00;
+    background: url('images/background-gradient-left.svg') right repeat-y, var(--white);
+    grid-area: aside-left;
+}
+
+.sidebar-area {
+    background: var(--sidebar-area-bg);
+    grid-area: aside;
+}
+
+.sidebar-right {
+    background: url('images/background-gradient-right.svg') left repeat-y, var(--white);
+    grid-area: aside-right;
+}
+
+
+/* footer */
+
+.footer-full-bg {
+    grid-row: 4 / 5;
+    background: var(--footer-full-bg);
+}
+
+.footer-area {
+    background: var(--footer-area-bg);
+    grid-area: footer;
+}

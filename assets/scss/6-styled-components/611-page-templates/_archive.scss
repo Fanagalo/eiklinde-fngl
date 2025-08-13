@@ -1,0 +1,13 @@
+:root {
+    --archive-article-bg: var(--white);
+}
+
+.category main,
+.tag main,
+.archive main {
+    margin: 2rem 2rem 0 2rem;
+}
+
+.archive-description {
+    @include text-width;
+}

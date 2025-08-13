@@ -1,0 +1,15 @@
+.search-submit {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-submit::before {
+    font-family: "FontAwesome";
+    content: "\f002";
+    font-size: 1.25rem;
+    padding-left: .25rem;
+    ;
+}

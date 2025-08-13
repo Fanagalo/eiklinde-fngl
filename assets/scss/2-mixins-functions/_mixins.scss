@@ -1,0 +1,32 @@
+@mixin paragraph-styling {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-paragraph);
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--paragraph-color);
+    margin: 0 0 1.75rem 0;
+}
+
+@mixin heading-styling {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-bold);
+    color: var(--heading-color);
+    clear: both;
+    word-break: break-word;
+}
+
+@mixin text-width {
+    max-width: var(--max-width-text);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin small-button {
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-sub);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 2px .5rem 2px .5rem;
+    line-height: var(--line-height-xxs);
+}

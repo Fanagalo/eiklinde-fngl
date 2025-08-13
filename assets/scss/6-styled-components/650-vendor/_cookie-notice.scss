@@ -1,0 +1,34 @@
+#cookie-notice {
+    background-color: var(--eiklinde-blauw) !important;
+    width: calc( 100vw - 6rem);
+    min-width: 100px;
+    left: 3rem;
+    bottom: 3rem;
+}
+
+.cn-text-container {
+    @include paragraph-styling;
+    color: var(--white);
+}
+
+.cn-close-icon,
+#cn-close-notice {
+    display: none;
+}
+
+.cn-button {
+    border-radius: 0;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-sub);
+    border: 2px solid var(--white) !important;
+}
+
+#cn-accept-cookie {
+    background-color: var(--white);
+    color: var(--eiklinde-blauw);
+}
+
+#cn-refuse-cookie {
+    background-color: var(--eiklinde-blauw);
+}

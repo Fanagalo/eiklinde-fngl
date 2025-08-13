@@ -1,0 +1,190 @@
+.nav-area {
+    display: grid;
+}
+
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+#site-navigation {
+    background-color: var(--menu-bg);
+    border: none;
+    height: auto;
+    margin: 0;
+    a {
+        color: var(--paragraph-color);
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li:hover>a {
+        // this declares the color of the menu text when a submenu is focused
+        color: var(--paragraph-color);
+    }
+}
+
+
+/*--------------------------------------------------------------
+### Menu mobile (hamburger)
+
+Consider different media-query with "only"
+@media only screen and (max-width: $mq-medium) {
+
+--------------------------------------------------------------*/
+
+@media screen and (max-width: $mq-medium) {
+    #site-navigation {
+        display: none; // toggle this to show menu permanently
+        display: block; // temp
+    }
+    .menu,
+    .sub-menu {
+        margin: 0;
+    }
+    .menu {
+        border-bottom: 1px solid var(--menu-border);
+    }
+    .menu-item {
+        background-color: var(--menu-bg);
+        border-top: 1px solid var(--menu-border);
+        a {
+            display: block;
+            padding: .5rem 1rem;
+            // background: #ff0;
+        }
+    }
+    .menu>.menu-item:first-of-type {
+        border-top: none;
+    }
+    .sub-menu {
+        display: none;
+        //        display: block; // temp
+        margin: .5em 0 -.5em 0; // cruciale code
+    }
+    .menu-toggle {
+        background-color: var(--menu-bg);
+        border: none;
+        border-radius: 0;
+        color: var(--paragraph-color);
+        display: block;
+        font-family: "FontAwesome";
+        font-size: 32px;
+        outline: none;
+        padding: 12px 15px 12px 0;
+        text-align: right;
+        width: 100%;
+        z-index: 999;
+        &::before {
+            content: "\f0c9";
+        }
+        &.activated::before {
+            content: "\f077";
+        }
+    }
+    .sub-menu-toggle {
+        background-color: transparent;
+        // background-color: red; // temp
+        border: none;
+        font-family: "FontAwesome";
+        font-size: 1.5em;
+        outline: none;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        z-index: 999
+    }
+    .sub-menu-toggle::before {
+        content: "\f105";
+    }
+    .sub-menu-toggle.activated::before {
+        content: "\f107";
+    }
+    .menu-item-has-children {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "button anchor";
+        a {
+            padding-left: 0;
+            grid-area: anchor;
+        }
+        button {
+            grid-area: button;
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+### Menu desktop
+--------------------------------------------------------------*/
+
+@media only screen and (min-width: $mq-medium) {
+    #site-navigation {
+        width: 100%;
+    }
+    .menu-toggle,
+    .sub-menu-toggle {
+        display: none;
+    }
+    .menu {
+        margin: 0 auto;
+        max-width: var(--max-width-container);
+    }
+    .menu>.menu-item {
+        display: inline-block;
+    }
+    .menu-item {
+        display: block;
+    }
+    .menu-item a {
+        color: var(--paragraph-color);
+        display: inline-block;
+        padding: .5em 1em .5em 1em;
+        font-size: 20px;
+    }
+    .menu-item:hover,
+    .menu-item a:hover,
+    .menu-item a:active {
+        background-color: var(--menu-bg-hover);
+        color: var(--menu-text-hover) !important;
+    }
+    .menu>.menu-item-has-children>a::after {
+        content: " \f107";
+        font-family: FontAwesome;
+    }
+    .sub-menu {
+        display: none;
+    }
+    .sub-menu a {
+        color: var(--paragraph-color);
+        font-size: 16px;
+        padding: .5em 1em .5em 1em;
+    }
+    .menu>.menu-item-has-children:hover>.sub-menu {
+        background: var(--menu-bg-hover);
+        display: block;
+        margin-left: 0;
+        position: absolute;
+        width: 250px;
+        border-bottom: 1px solid var(--menu-border);
+        z-index: 2;
+    }
+    .sub-menu .menu-item,
+    .sub-menu .sub-menu {
+        display: block;
+    }
+    .sub-menu .menu-item,
+    .sub-menu .sub-menu {
+        border-top: 1px solid var(--menu-border);
+    }
+    .sub-menu .menu-item:first-of-type {
+        border-top: none;
+    }
+    .sub-menu .menu-item a:hover,
+    .sub-menu .menu-item a:active {
+        background-color: var(--menu-bg-hover);
+        color: var(--menu-text-hover);
+    }
+}

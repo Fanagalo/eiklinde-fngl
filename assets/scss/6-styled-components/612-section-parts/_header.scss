@@ -1,0 +1,24 @@
+.site-title {
+    margin: .5rem 0;
+    padding: 0;
+}
+
+.site-title a,
+.site-title a:visited {
+    color: var(--diap-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.site-description {
+    color: var(--diap-color);
+}
+
+h1.site-logo,
+p.site-logo {
+    margin: 0;
+}
+
+.site-logo img {
+    height: 100px;
+}

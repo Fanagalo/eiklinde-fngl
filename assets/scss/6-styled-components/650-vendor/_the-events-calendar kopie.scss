@@ -1,0 +1,115 @@
+/**
+ *  Custom code written for plugin The Events Calendar Pro 5.2.1.1 by Modern Tribe, Inc.
+ *  
+ *  Settings on Basic Styles
+ *  
+ *  
+ *  
+ */
+
+
+/*
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-paragraph);
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--paragraph-color);
+    margin: 0 0 1.75rem 0;
+    margin: 0 0 2rem 0;
+    border: 1px solid var(--grey-lighter);
+
+
+    h2 {
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-large);
+        font-family: var(--font-sans);
+        font-weight: var(--font-weight-bold);
+        color: var(--heading-color);
+        clear: both;
+        word-break: break-word;
+
+.article-post-date {
+    font-size: var(--font-size-small);
+    color: var(--grey-dark);
+    text-transform: lowercase;
+
+*/
+
+
+/* deze
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
+.tribe-common .tribe-common-form-control-text__input {
+    @include paragraph-styling;
+}
+
+.tribe-common .tribe-common-b2 {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-paragraph);
+    color: var(--paragraph-color);
+}
+
+
+/*
+ * concert archive list 
+ */
+
+
+/* concert box outline */
+
+
+/* contert date and time */
+
+
+/* deze
+.tribe-events-calendar-list__event-datetime-wrapper,
+.tribe-events-calendar-list__event-datetime-wrapper .tribe-common-b2 {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b2 {
+    font-size: var(--font-size-small);
+}
+
+
+/* concert title */
+
+
+/* deze
+.tribe-common .tribe-common-h6 {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-bold);
+    clear: both;
+    word-break: break-word;
+    a {
+        color: var(--heading-color);
+        &hover {}
+    }
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-h4--min-medium {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-large);
+}
+
+.tribe-common .tribe-common-anchor-thin:active,
+.tribe-common .tribe-common-anchor-thin:focus,
+.tribe-common .tribe-common-anchor-thin:hover {
+    border-bottom: none;
+    text-decoration: underline;
+}
+
+
+/* concert location: follows - apparently - other styles */
+
+
+/* concert text */
+
+
+/* deze
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-b2 {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+}
+
+*/

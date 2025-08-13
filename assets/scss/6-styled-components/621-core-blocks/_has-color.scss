@@ -1,0 +1,54 @@
+/* both .has-background-color and .has-color = text color */
+
+p.has-background {
+    padding: 20px 30px;
+}
+
+p.has-text-color a {
+    color: inherit;
+}
+
+:root {
+    /* stylelint-disable function-comma-space-after */
+    /* stylelint-enable function-comma-space-after */
+}
+
+ :root .has-paars-background-color {
+    background-color: var(--eiklinde-paars);
+}
+
+ :root .has-blauw-background-color {
+    background-color: var(--eiklinde-blauw);
+}
+
+ :root .has-rood-background-color {
+    background-color: var(--eiklinde-rood);
+}
+
+ :root .has-tekst-grijs-background-color {
+    background-color: var(--paragraph-color);
+}
+
+ :root .has-wit-background-color {
+    background-color: var(--white);
+}
+
+ :root .has-paars-color {
+    color: var(--eiklinde-paars);
+}
+
+ :root .has-blauw-color {
+    color: var(--eiklinde-blauw);
+}
+
+ :root .has-rood-color {
+    color: var(--eiklinde-rood);
+}
+
+ :root .has-tekst-grijs-color {
+    color: var(--paragraph-color);
+}
+
+ :root .has-wit-color {
+    color: var(--white);
+}

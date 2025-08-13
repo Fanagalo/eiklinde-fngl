@@ -1,0 +1,210 @@
+/**
+ * Custom CSS for plugins:
+ * 
+ * Events Manager, plugin by Marcus Sykes, version 5.10
+ * https://nl.wordpress.org/plugins/events-manager/
+ * http://wp-events-plugin.com/
+ */
+
+/* variables */
+:root {
+    --date-size: 2.5rem;
+}
+
+/* list of concerts
+
+- short codes [events_list] and [events_list_grouped]
+
+- default pattern as set in backend settings
+- all elements with prefix "fngl-em-" 
+
+<div class="fngl-em-concert">
+	<div class="fngl-em-cat-block">
+		#_EVENTCATEGORIES
+	</div>
+	<div class="fngl-em-date-block">
+		<div class="fngl-em-date-block-weekday">#_{D}</div>
+		<div class="fngl-em-date-block-day">#_{j}</div>
+		<div class="fngl-em-date-block-month">#_{M}</div>
+		<div class="fngl-em-date-block-time">#_24HSTARTTIME</div>
+	</div>
+	<div class="fngl-em-details">
+		<h4 class="fngl-em-name">#_EVENTNAME</h4>
+		<p class="fngl-em-location">#_LOCATIONNAME</p>
+		<p class="fngl-em-excerpt">#_EVENTEXCERPT{20,...}</p>
+		<a class="archive-post-readmore" href="#_EVENTURL">meer gegevens</a>
+	</div>
+</div>
+
+*/
+
+.fngl-em-concert p:empty,
+.fngl-em-concert + p {
+    display: none;
+}
+
+.fngl-em-concert {
+    border: var(--grey-lighter) 1px solid;
+    display: grid;
+    grid-template-columns: 5rem auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+    align-items: start;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+/* category block */
+.fngl-em-cat-block {
+    grid-column: span 2;
+    justify-self: end;
+}
+
+/* date block */
+.fngl-em-date-block {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    padding: 0.5rem;
+    background-color: var(--eiklinde-paars);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-xxs);
+}
+.fngl-em-date-block-weekday,
+.fngl-em-date-block-month {
+}
+.fngl-em-date-block-time {
+    font-weight: var(--font-weight-paragraph);
+}
+.fngl-em-date-block-day {
+    font-weight: var(--font-weight-sub);
+    font-size: var(--date-size);
+    line-height: var(--line-height-large);
+}
+
+/* details block */
+.fngl-em-details {
+    display: grid;
+    .archive-post-readmore {
+        justify-self: left;
+    }
+}
+.fngl-em-name {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large);
+}
+.fngl-em-location {
+    color: var(--paragraph-color);
+    // line-height: var(--line-height-xs);
+    font-style: italic;
+    font-weight: var(--font-weight-sub);
+}
+
+.fngl-em-excerpt {
+}
+
+/* read more link uses default solution from _content-archive.scss */
+.fngl-em-concert {
+    .archive-post-readmore {
+        background-color: var(--grey-middle);
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+/* event categories, default class */
+.event-categories {
+    justify-self: end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        background-color: var(--eiklinde-paars);
+        display: inline;
+        margin-right: 0.25rem;
+        padding: 0.125rem 0.5rem;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: var(--font-size-xs);
+            color: var(--diap-color);
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.css-events-list h3 {
+    margin: 1rem auto 0.5rem;
+}
+
+/* single event pattern 
+
+- default pattern as set in backend settings
+- class .fngl-em-single-details inserted but not yet used
+
+<div class="fngl-em-single-details">
+	<p><strong>Datum en tijd</strong>: #_{l} #_EVENTDATES om #_24HSTARTTIME uur <br/>
+	{has_location}
+		<strong>Locatie</strong>: #_LOCATIONLINK, #_LOCATIONADDRESS, #_LOCATIONPOSTCODE #_LOCATIONTOWN
+	{/has_location}
+	</p>
+</div>
+<p>#_EVENTNOTES</p>
+{has_bookings}
+	<h3>Toegangskaarten kopen</h3>
+	#_BOOKINGFORM
+{/has_bookings}
+*/
+
+.type-event .article-post-date {
+    display: none;
+}
+
+/* homepage pattern (custom)
+
+Following shortcode in shortcode-block placed within a group-block with class="fngl-em-home"
+
+[events_list limit="10"]<a href="#_EVENTURL"><div class="fngl-em-home-concert">
+	<div class="fngl-em-date-block">
+		<div class="fngl-em-date-block-day">#_{j}</div>
+		<div class="fngl-em-date-block-month">#_{M}</div>
+	</div>
+	<div class="fngl-em-details">
+		<h3 class="fngl-em-name">#_EVENTNAME</h3>
+		<p class="fngl-em-location">#_LOCATIONNAME</p>
+		<a class="archive-post-readmore" href="#_EVENTURL">meer gegevens</a>
+	</div>
+</div></a>[/events_list]
+*/
+
+.fngl-em-home {
+    a {
+        text-decoration: none;
+    }
+    .boxed-link {
+        margin-top: 1rem;
+    }
+
+    .fngl-em-concert {
+        .fngl-em-date-block-day {
+            margin-top: 0.25rem;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        p:empty {
+            display: none;
+        }
+        &:hover {
+            box-shadow: var(--fngl-recent-posts-hover-shadow);
+        }
+    }
+}

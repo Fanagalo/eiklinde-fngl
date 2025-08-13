@@ -1,0 +1,18 @@
+:root {
+    --mq-small: 450px;
+    --mq-medium: 800px;
+    --mq-large: 1040px;
+    --max-width-text: 600px;
+    --max-width-container: 1040px;
+    --default-margin: 2rem;
+}
+
+
+/* Core CSS variables don't work in media queries, so use SCSS variables instead */
+
+$mq-small: 450px;
+$mq-medium: 800px;
+$mq-large: 1040px;
+$max-width-text: 600px;
+$max-width-container: 1040px;
+$default-margin: 32px;

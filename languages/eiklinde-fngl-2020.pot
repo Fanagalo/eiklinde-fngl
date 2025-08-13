@@ -1,0 +1,310 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Eik en Linde FNGL 2020\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-12 09:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.4; wp-5.5.3"
+
+#: functions.php:43
+msgid "Primary"
+msgstr ""
+
+#: functions.php:44
+msgid "Secondary"
+msgstr ""
+
+#: functions.php:83
+msgid "warm yellow"
+msgstr ""
+
+#: functions.php:84
+msgid "orange"
+msgstr ""
+
+#: functions.php:85
+msgid "red"
+msgstr ""
+
+#: functions.php:86
+msgid "purple"
+msgstr ""
+
+#: functions.php:87
+msgid "deep blue"
+msgstr ""
+
+#: functions.php:88
+msgid "sky blue"
+msgstr ""
+
+#: functions.php:89
+msgid "dark green"
+msgstr ""
+
+#: functions.php:90
+msgid "fresh green"
+msgstr ""
+
+#: functions.php:91
+msgid "deep black"
+msgstr ""
+
+#: functions.php:92
+msgid "text black"
+msgstr ""
+
+#: functions.php:93
+msgid "neutral gray"
+msgstr ""
+
+#: functions.php:94
+msgid "light gray"
+msgstr ""
+
+#: functions.php:95
+msgid "white"
+msgstr ""
+
+#: functions.php:103
+msgctxt "Name of the small font size in the block editor"
+msgid "Small"
+msgstr ""
+
+#: functions.php:104
+msgctxt "Short name of the small font size in the block editor."
+msgid "S"
+msgstr ""
+
+#: functions.php:109
+msgctxt "Name of the regular font size in the block editor"
+msgid "Regular"
+msgstr ""
+
+#: functions.php:110
+msgctxt "Short name of the regular font size in the block editor."
+msgid "M"
+msgstr ""
+
+#: functions.php:115
+msgctxt "Name of the large font size in the block editor"
+msgid "Large"
+msgstr ""
+
+#: functions.php:116
+msgctxt "Short name of the large font size in the block editor."
+msgid "L"
+msgstr ""
+
+#: functions.php:121
+msgctxt "Name of the larger font size in the block editor"
+msgid "Larger"
+msgstr ""
+
+#: functions.php:122
+msgctxt "Short name of the larger font size in the block editor."
+msgid "XL"
+msgstr ""
+
+#: functions.php:160
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:162
+msgid "Add widgets here."
+msgstr ""
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#. %1$s: smiley
+#: 404.php:47
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#. 1: title.
+#: comments.php:34
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr ""
+
+#. %s: search query.
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:50
+msgid "Secondary Menu"
+msgstr ""
+
+#: header.php:67
+msgid "Main Menu"
+msgstr ""
+
+#: footer.php:20
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. %s: CMS name, i.e. WordPress.
+#: footer.php:23
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. 1: Theme name, 2: Theme author.
+#: footer.php:28
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: searchform.php:24
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:28
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:32
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:45
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:62
+msgid ", "
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:65
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:69
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:72
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:82
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:99 template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content.php:57
+msgid "Pages:"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:46
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#. Name of the theme
+msgid "Eik en Linde FNGL 2020"
+msgstr ""
+
+#. Description of the theme
+msgid "Eik en Linde theme built on fngl_s-core 0.77"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://fanagalo.nl"
+msgstr ""
+
+#. Author of the theme
+msgid "Jaap Wiering"
+msgstr ""
