@@ -7,8 +7,7 @@
     --eiklinde-rood: hsl(0, 100%, 40%);
     /* color scheme */
     /* note: this must be HexRGB, RGB(A) or HSL(A); CSS Variable won't work */
-    //$primary-color: hsl(300, 82%, 28%);
-    $primary-color: hsl(150, 82%, 28%);
+    $primary-color: hsl(300, 82%, 28%);
     $secondary-color: hsl(0, 0%, 50%);
     $tertiary-color: hsl(0, 100%, 40%);
     --primary-color: #{$primary-color};

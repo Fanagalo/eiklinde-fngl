@@ -5,7 +5,7 @@
  Author: Jaap Wiering
  Author URI: https://fanagalo.nl
  Description: Eik en Linde theme
- Version: 1.02
+ Version: 1.03
  License: GNU General Public License v2 or later
  Text Domain: eiklinde-fngl 
 */
@@ -16,7 +16,7 @@
   --eiklinde-rood: hsl(0, 100%, 40%);
   /* color scheme */
   /* note: this must be HexRGB, RGB(A) or HSL(A); CSS Variable won't work */
-  --primary-color: hsl(150, 82%, 28%);
+  --primary-color: hsl(300, 82%, 28%);
   --secondary-color: hsl(0, 0%, 50%);
   --tertiary-color: hsl(0, 100%, 40%);
   /* text colors */
@@ -34,12 +34,12 @@
   /* synonyms */
   --diap-color: var(--white);
   /* primary tints */
-  --primary-lightest: rgb(194.463, 223.737, 209.1);
-  --primary-lighter: rgb(133.926, 192.474, 163.2);
-  --primary-light: rgb(73.389, 161.211, 117.3);
-  --primary-dark: rgb(9.639, 97.461, 53.55);
-  --primary-darker: rgb(6.426, 64.974, 35.7);
-  --primary-darkest: rgb(3.213, 32.487, 17.85);
+  --primary-lightest: rgb(223.737, 194.463, 223.737);
+  --primary-lighter: rgb(192.474, 133.926, 192.474);
+  --primary-light: rgb(161.211, 73.389, 161.211);
+  --primary-dark: rgb(97.461, 9.639, 97.461);
+  --primary-darker: rgb(64.974, 6.426, 64.974);
+  --primary-darkest: rgb(32.487, 3.213, 32.487);
   /* mix over black and white */
   --grey-lightest: rgb(223.125, 223.125, 223.125);
   --grey-lighter: rgb(191.25, 191.25, 191.25);
