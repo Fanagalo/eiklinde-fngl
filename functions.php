@@ -171,7 +171,7 @@ function eiklinde_fngl_2021_scripts() {
 		wp_register_style( 'wp-block-library-theme', '' );
 
 	// Enable custom frontend styles; 'style' refers to style.css
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );
 
 	// Script for responsive mobile menu
