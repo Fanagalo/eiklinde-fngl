@@ -172,7 +172,7 @@ function eiklinde_fngl_2021_scripts() {
 
 	// Enable custom frontend styles; 'style' refers to style.css
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	// wp_enqueue_style('style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version') );
 
 	// Script for responsive mobile menu
 	// source: https://www.customyou.nl/responsive-menu-wordpress-clean-tutorial/
