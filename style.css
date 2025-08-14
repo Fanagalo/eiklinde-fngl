@@ -29,32 +29,32 @@
   --warning-color: #f90;
   --mark-color: #fd0;
   --success-color: #0b0;
+  --white: #fff;
+  --black: #000;
   /* synonyms */
   --diap-color: var(--white);
   /* primary tints */
-  --primary-lightest: color.mix(white, $primary-color, 75%);
-  --primary-lighter: color.mix(white, $primary-color, 50%);
-  --primary-light: color.mix(white, $primary-color, 25%);
-  --primary-dark: color.mix(black, $primary-color, 25%);
-  --primary-darker: color.mix(black, $primary-color, 50%);
-  --primary-darkest: color.mix(black, $primary-color, 75%);
+  --primary-lightest: rgb(223.737, 194.463, 223.737);
+  --primary-lighter: rgb(192.474, 133.926, 192.474);
+  --primary-light: rgb(161.211, 73.389, 161.211);
+  --primary-dark: rgb(97.461, 9.639, 97.461);
+  --primary-darker: rgb(64.974, 6.426, 64.974);
+  --primary-darkest: rgb(32.487, 3.213, 32.487);
   /* mix over black and white */
-  --white: color.mix(white, $secondary-color, 100%);
-  --grey-lightest: color.mix(white, $secondary-color, 75%);
-  --grey-lighter: color.mix(white, $secondary-color, 50%);
-  --grey-light: color.mix(white, $secondary-color, 25%);
+  --grey-lightest: rgb(223.125, 223.125, 223.125);
+  --grey-lighter: rgb(191.25, 191.25, 191.25);
+  --grey-light: rgb(159.375, 159.375, 159.375);
   --grey-middle: hsl(0, 0%, 50%);
-  --grey-dark: color.mix(black, $secondary-color, 25%);
-  --grey-darker: color.mix(black, $secondary-color, 50%);
-  --grey-darkest: color.mix(black, $secondary-color, 75%);
-  --black: color.mix(black, $secondary-color, 100%);
+  --grey-dark: rgb(95.625, 95.625, 95.625);
+  --grey-darker: rgb(63.75, 63.75, 63.75);
+  --grey-darkest: rgb(31.875, 31.875, 31.875);
   /* tertiary tints */
-  --tertiary-lightest: color.mix(white, $tertiary-color, 75%);
-  --tertiary-lighter: color.mix(white, $tertiary-color, 50%);
-  --tertiary-light: color.mix(white, $tertiary-color, 25%);
-  --tertiary-dark: color.mix(black, $tertiary-color, 25%);
-  --tertiary-darker: color.mix(black, $tertiary-color, 50%);
-  --tertiary-darkest: color.mix(black, $tertiary-color, 75%);
+  --tertiary-lightest: rgb(242.25, 191.25, 191.25);
+  --tertiary-lighter: rgb(229.5, 127.5, 127.5);
+  --tertiary-light: rgb(216.75, 63.75, 63.75);
+  --tertiary-dark: #990000;
+  --tertiary-darker: #660000;
+  --tertiary-darkest: #330000;
 }
 
 :root {

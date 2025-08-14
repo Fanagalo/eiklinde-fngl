@@ -23,30 +23,55 @@
     --warning-color: #f90;
     --mark-color: #fd0;
     --success-color: #0b0;
+    --white: #fff;
+    --black: #000;
     /* synonyms */
     --diap-color: var(--white);
     /* primary tints */
-    --primary-lightest: color.mix(white, $primary-color, 75%);
-    --primary-lighter: color.mix(white, $primary-color, 50%);
-    --primary-light: color.mix(white, $primary-color, 25%);
-    --primary-dark: color.mix(black, $primary-color, 25%);
-    --primary-darker: color.mix(black, $primary-color, 50%);
-    --primary-darkest: color.mix(black, $primary-color, 75%);
+
+    // $primary-lightest: color.mix(white, $primary-color, 75%);
+    // --primary-lightest: #{$primary-lightest};
+
+    $primary-lightest: color.mix(white, $primary-color, 75%);
+    $primary-lighter: color.mix(white, $primary-color, 50%);
+    $primary-light: color.mix(white, $primary-color, 25%);
+    $primary-dark: color.mix(black, $primary-color, 25%);
+    $primary-darker: color.mix(black, $primary-color, 50%);
+    $primary-darkest: color.mix(black, $primary-color, 75%);
+    --primary-lightest: #{$primary-lightest};
+    --primary-lighter: #{$primary-lighter};
+    --primary-light: #{$primary-light};
+    --primary-dark: #{$primary-dark};
+    --primary-darker: #{$primary-darker};
+    --primary-darkest: #{$primary-darkest};
+
     /* mix over black and white */
-    --white: color.mix(white, $secondary-color, 100%);
-    --grey-lightest: color.mix(white, $secondary-color, 75%);
-    --grey-lighter: color.mix(white, $secondary-color, 50%);
-    --grey-light: color.mix(white, $secondary-color, 25%);
-    --grey-middle: #{$secondary-color};
-    --grey-dark: color.mix(black, $secondary-color, 25%);
-    --grey-darker: color.mix(black, $secondary-color, 50%);
-    --grey-darkest: color.mix(black, $secondary-color, 75%);
-    --black: color.mix(black, $secondary-color, 100%);
+    $grey-lightest: color.mix(white, $secondary-color, 75%);
+    $grey-lighter: color.mix(white, $secondary-color, 50%);
+    $grey-light: color.mix(white, $secondary-color, 25%);
+    $grey-middle: #{$secondary-color};
+    $grey-dark: color.mix(black, $secondary-color, 25%);
+    $grey-darker: color.mix(black, $secondary-color, 50%);
+    $grey-darkest: color.mix(black, $secondary-color, 75%);
+    --grey-lightest: #{$grey-lightest};
+    --grey-lighter: #{$grey-lighter};
+    --grey-light: #{$grey-light};
+    --grey-middle: #{$grey-middle};
+    --grey-dark: #{$grey-dark};
+    --grey-darker: #{$grey-darker};
+    --grey-darkest: #{$grey-darkest};
+
     /* tertiary tints */
-    --tertiary-lightest: color.mix(white, $tertiary-color, 75%);
-    --tertiary-lighter: color.mix(white, $tertiary-color, 50%);
-    --tertiary-light: color.mix(white, $tertiary-color, 25%);
-    --tertiary-dark: color.mix(black, $tertiary-color, 25%);
-    --tertiary-darker: color.mix(black, $tertiary-color, 50%);
-    --tertiary-darkest: color.mix(black, $tertiary-color, 75%);
+    $tertiary-lightest: color.mix(white, $tertiary-color, 75%);
+    $tertiary-lighter: color.mix(white, $tertiary-color, 50%);
+    $tertiary-light: color.mix(white, $tertiary-color, 25%);
+    $tertiary-dark: color.mix(black, $tertiary-color, 25%);
+    $tertiary-darker: color.mix(black, $tertiary-color, 50%);
+    $tertiary-darkest: color.mix(black, $tertiary-color, 75%);
+    --tertiary-lightest: #{$tertiary-lightest};
+    --tertiary-lighter: #{$tertiary-lighter};
+    --tertiary-light: #{$tertiary-light};
+    --tertiary-dark: #{$tertiary-dark};
+    --tertiary-darker: #{$tertiary-darker};
+    --tertiary-darkest: #{$tertiary-darkest};
 }
