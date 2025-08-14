@@ -1,3 +1,6 @@
+@use "../../1-global-variables/width" as mq;
+@use "../../2-mixins-functions/mixins" as mixins;
+
 :root {
     --archive-post-border: 1px solid var(--grey-lighter);
     --archive-post-background: var(--white);
@@ -9,14 +12,14 @@
     border: var(--archive-post-border);
     background-color: var(--archive-post-background);
     a {
-        text-decoration: none
+        text-decoration: none;
     }
     .archive-post-text {
-        padding: .5rem 1rem 1rem 1rem;
+        padding: 0.5rem 1rem 1rem 1rem;
     }
 }
 
-@media screen and (min-width: $mq-medium) {
+@media screen and (min-width: #{mq.$mq-medium}) {
     .archive-post {
         display: grid;
         grid-template-columns: repeat(3, 33.33%);
@@ -36,7 +39,7 @@
         .archive-post-image {
             grid-column: -2 / span 1;
             // below a hack to eliminate an occasional white line on the right of an image
-            margin-right: -.5px;
+            margin-right: -0.5px;
         }
         .archive-post-text {
             grid-column: 1 / span 2;
@@ -54,25 +57,25 @@
 }
 
 .archive-post-title {
-    margin: .5rem 0 0 0;
+    margin: 0.5rem 0 0 0;
 }
 
-.archive-post-excerpt {
-    a& {
-        color: var(--paragraph-color)
-    }
-    p {
-        margin: 0;
-    }
+a.archive-post-excerpt {
+    color: var(--paragraph-color);
+}
+
+.archive-post-excerpt p {
+    margin: 0;
+}
+
+a.archive-post-readmore {
+    color: var(--diap-color);
 }
 
 .archive-post-readmore {
-    @include small-button;
+    @include mixins.small-button;
     background-color: var(--eiklinde-rood);
     &:hover {
         background-color: var(--tertiary-dark);
-    }
-    a& {
-        color: var(--diap-color);
     }
 }

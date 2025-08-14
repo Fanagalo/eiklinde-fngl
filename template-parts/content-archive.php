@@ -30,7 +30,7 @@
                 the_excerpt();
             '</a>'; 
 
-            echo '<a href=' .  esc_url( get_permalink() ) . ' rel="bookmark" class="archive-post-readmore">' . __('lees verder','eiklinde-fngl-2021') .'</a>';
+            echo '<a href=' .  esc_url( get_permalink() ) . ' rel="bookmark" class="archive-post-readmore">' . __('lees verder','eiklinde-fngl') .'</a>';
 
         echo '</div><!-- archive-post-text -->';
     ?>

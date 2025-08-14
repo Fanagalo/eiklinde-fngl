@@ -1,3 +1,5 @@
+@use "sass:color";
+
 :root {
     /* brand colors */
     --eiklinde-paars: hsl(300, 82%, 28%);
@@ -24,27 +26,27 @@
     /* synonyms */
     --diap-color: var(--white);
     /* primary tints */
-    --primary-lightest: #{mix(white, $primary-color, 75%)};
-    --primary-lighter: #{mix(white, $primary-color, 50%)};
-    --primary-light: #{mix(white, $primary-color, 25%)};
-    --primary-dark: #{mix(black, $primary-color, 25%)};
-    --primary-darker: #{mix(black, $primary-color, 50%)};
-    --primary-darkest: #{mix(black, $primary-color, 75%)};
+    --primary-lightest: color.mix(white, $primary-color, 75%);
+    --primary-lighter: color.mix(white, $primary-color, 50%);
+    --primary-light: color.mix(white, $primary-color, 25%);
+    --primary-dark: color.mix(black, $primary-color, 25%);
+    --primary-darker: color.mix(black, $primary-color, 50%);
+    --primary-darkest: color.mix(black, $primary-color, 75%);
     /* mix over black and white */
-    --white: #{mix(white, $secondary-color, 100%)};
-    --grey-lightest: #{mix(white, $secondary-color, 75%)};
-    --grey-lighter: #{mix(white, $secondary-color, 50%)};
-    --grey-light: #{mix(white, $secondary-color, 25%)};
+    --white: color.mix(white, $secondary-color, 100%);
+    --grey-lightest: color.mix(white, $secondary-color, 75%);
+    --grey-lighter: color.mix(white, $secondary-color, 50%);
+    --grey-light: color.mix(white, $secondary-color, 25%);
     --grey-middle: #{$secondary-color};
-    --grey-dark: #{mix(black, $secondary-color, 25%)};
-    --grey-darker: #{mix(black, $secondary-color, 50%)};
-    --grey-darkest: #{mix(black, $secondary-color, 75%)};
-    --black: #{mix(black, $secondary-color, 100%)};
+    --grey-dark: color.mix(black, $secondary-color, 25%);
+    --grey-darker: color.mix(black, $secondary-color, 50%);
+    --grey-darkest: color.mix(black, $secondary-color, 75%);
+    --black: color.mix(black, $secondary-color, 100%);
     /* tertiary tints */
-    --tertiary-lightest: #{mix(white, $tertiary-color, 75%)};
-    --tertiary-lighter: #{mix(white, $tertiary-color, 50%)};
-    --tertiary-light: #{mix(white, $tertiary-color, 25%)};
-    --tertiary-dark: #{mix(black, $tertiary-color, 25%)};
-    --tertiary-darker: #{mix(black, $tertiary-color, 50%)};
-    --tertiary-darkest: #{mix(black, $tertiary-color, 75%)};
+    --tertiary-lightest: color.mix(white, $tertiary-color, 75%);
+    --tertiary-lighter: color.mix(white, $tertiary-color, 50%);
+    --tertiary-light: color.mix(white, $tertiary-color, 25%);
+    --tertiary-dark: color.mix(black, $tertiary-color, 25%);
+    --tertiary-darker: color.mix(black, $tertiary-color, 50%);
+    --tertiary-darkest: color.mix(black, $tertiary-color, 75%);
 }

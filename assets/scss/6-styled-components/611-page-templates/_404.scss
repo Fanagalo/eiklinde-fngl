@@ -1,9 +1,11 @@
+@use "../../2-mixins-functions/mixins" as mixins;
+
 .error404 {
     main {
         margin: 2rem 2rem 0 2rem;
     }
     .page-content {
-        @include text-width;
+        @include mixins.text-width;
         .search-form-top {
             margin-bottom: 2rem;
         }

@@ -1,13 +1,15 @@
+@use "../../2-mixins-functions/mixins" as mixins;
+
 #cookie-notice {
     background-color: var(--eiklinde-blauw) !important;
-    width: calc( 100vw - 6rem);
+    width: calc(100vw - 6rem);
     min-width: 100px;
     left: 3rem;
     bottom: 3rem;
 }
 
 .cn-text-container {
-    @include paragraph-styling;
+    @include mixins.paragraph-styling;
     color: var(--white);
 }
 

@@ -20,11 +20,11 @@ if ( ! function_exists( 'eiklinde_fngl_2021_setup' ) ) :
 	function eiklinde_fngl_2021_setup() {
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
+		 * Translations can be filed in the /assets/languages/ directory.
 		 * If you're building a theme based on Healthmasters theme by Fanagalo, use a find and replace
-		 * to change 'eiklinde-fngl-2021' to the name of your theme in all the template files.
+		 * to change 'eiklinde-fngl' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'eiklinde-fngl-2021', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'eiklinde-fngl', get_template_directory() . 'assets/languages' );
 
 		add_theme_support( 'automatic-feed-links' ); // Add default posts and comments RSS feed links to head.
 	
@@ -40,8 +40,8 @@ if ( ! function_exists( 'eiklinde_fngl_2021_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'eiklinde-fngl-2021' ),
-			'secondary' => esc_html__( 'Secondary', 'eiklinde-fngl-2021' ),
+			'primary' => esc_html__( 'Primary', 'eiklinde-fngl' ),
+			'secondary' => esc_html__( 'Secondary', 'eiklinde-fngl' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -80,11 +80,11 @@ if ( ! function_exists( 'eiklinde_fngl_2021_setup' ) ) :
 
 		// custom color palette */
 		add_theme_support( 'editor-color-palette', array(
-			array('name' => __( 'paars',      'eiklinde-fngl-2021' ), 'slug' => 'paars',       'color' => 'hsl(300, 82%, 28%)',),
-			array('name' => __( 'blauw',      'eiklinde-fngl-2021' ), 'slug' => 'blauw',       'color' => 'hsl(210, 100%, 45%)',),
-			array('name' => __( 'rood',       'eiklinde-fngl-2021' ), 'slug' => 'rood',        'color' => 'hsl(0, 100%, 40%)',),
-			array('name' => __( 'tekst grijs','eiklinde-fngl-2021' ), 'slug' => 'tekst grijs', 'color' => 'hsl(0, 0%, 27%)',),
-			array('name' => __( 'wit',        'eiklinde-fngl-2021' ), 'slug' => 'wit',         'color' => '#ffffff',),
+			array('name' => __( 'paars',      'eiklinde-fngl' ), 'slug' => 'paars',       'color' => 'hsl(300, 82%, 28%)',),
+			array('name' => __( 'blauw',      'eiklinde-fngl' ), 'slug' => 'blauw',       'color' => 'hsl(210, 100%, 45%)',),
+			array('name' => __( 'rood',       'eiklinde-fngl' ), 'slug' => 'rood',        'color' => 'hsl(0, 100%, 40%)',),
+			array('name' => __( 'tekst grijs','eiklinde-fngl' ), 'slug' => 'tekst grijs', 'color' => 'hsl(0, 0%, 27%)',),
+			array('name' => __( 'wit',        'eiklinde-fngl' ), 'slug' => 'wit',         'color' => '#ffffff',),
 		
 			) );
 			
@@ -93,26 +93,26 @@ if ( ! function_exists( 'eiklinde_fngl_2021_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'eiklinde-fngl-2021' ),
-					'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'eiklinde-fngl-2021' ),
+					'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'eiklinde-fngl' ),
+					'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'eiklinde-fngl' ),
 					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'eiklinde-fngl-2021' ),
-					'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'eiklinde-fngl-2021' ),
+					'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'eiklinde-fngl' ),
+					'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'eiklinde-fngl' ),
 					'size'      => 21,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'eiklinde-fngl-2021' ),
-					'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'eiklinde-fngl-2021' ),
+					'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'eiklinde-fngl' ),
+					'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'eiklinde-fngl' ),
 					'size'      => 26.25,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'eiklinde-fngl-2021' ),
-					'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'eiklinde-fngl-2021' ),
+					'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'eiklinde-fngl' ),
+					'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'eiklinde-fngl' ),
 					'size'      => 32,
 					'slug'      => 'larger',
 				),
@@ -133,9 +133,9 @@ add_action( 'after_setup_theme', 'eiklinde_fngl_2021_setup' );
  */
 function eiklinde_fngl_2021_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'eiklinde-fngl-2021' ),
+		'name'          => esc_html__( 'Sidebar', 'eiklinde-fngl' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'eiklinde-fngl-2021' ),
+		'description'   => esc_html__( 'Add widgets here.', 'eiklinde-fngl' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -149,7 +149,7 @@ add_action( 'widgets_init', 'eiklinde_fngl_2021_widgets_init' );
  * Enqueue block editor styles.
  */
 function eiklinde_fngl_2021_editor_styles() {
-	wp_enqueue_style( 'eiklinde-fngl-2021', get_theme_file_uri( 'editor.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'eiklinde-fngl', get_theme_file_uri( 'editor.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'eiklinde_fngl_2021_editor_styles', 1, 1 );
 
@@ -175,10 +175,10 @@ function eiklinde_fngl_2021_scripts() {
 
 	// Script for responsive mobile menu
 	// source: https://www.customyou.nl/responsive-menu-wordpress-clean-tutorial/
-		wp_enqueue_script( 'nav-menu.js', get_template_directory_uri() . '/js/nav-menu.js', array('jquery'), '20151111', true );
+		wp_enqueue_script( 'nav-menu.js', get_template_directory_uri() . '/assets/js/nav-menu.js', array('jquery'), '20151111', true );
 
 	// Helps with accessibility for keyboard only users. Original from _s
-		wp_enqueue_script( 'eiklinde-fngl-2021-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+		wp_enqueue_script( 'eiklinde-fngl-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// Makes threads in comments. Original from _s
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

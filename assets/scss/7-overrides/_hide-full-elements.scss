@@ -1,6 +1,8 @@
+@use "../1-global-variables/width" as mq;
+
 /* hides full width elements in smaller viewports */
 
-@media screen and (max-width: $mq-large) {
+@media screen and (max-width: #{mq.$mq-large}) {
     .header-area-full,
     .nav-area-full,
     .main-area-full,

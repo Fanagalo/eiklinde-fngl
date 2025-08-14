@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'eiklinde-fngl-2021' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'eiklinde-fngl' ); ?></a>
 
 	<div class="header-full-bg"></div>
 
@@ -32,7 +32,7 @@
 
 		<div class="header-logo">
 			<?php
-			$logo = "<img src=" . get_theme_file_uri() . "/images/eik-en-linde-logo-kleur-met-wit.svg>"; 
+			$logo = "<img src=" . get_theme_file_uri() . "/assets/images/eik-en-linde-logo-kleur-met-wit.svg>"; 
 
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -47,7 +47,7 @@
 		</div><!-- .header-logo -->
 
 		<div class="nav-area-secondary">
-			<nav id="top-navigation" class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Menu', 'eiklinde-fngl-2021' ); ?>">
+			<nav id="top-navigation" class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Menu', 'eiklinde-fngl' ); ?>">
 				<?php wp_nav_menu( 
 					array( 
 						'theme_location' => 'secondary',
@@ -64,7 +64,7 @@
 
 		<div class="nav-area">
 
-			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Main Menu', 'eiklinde-fngl-2021' ); ?>">
+			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Main Menu', 'eiklinde-fngl' ); ?>">
 				<?php wp_nav_menu( 
 					array( 
 						'theme_location' => 'primary',

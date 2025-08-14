@@ -1,3 +1,5 @@
+@use "../../2-mixins-functions/mixins" as mixins;
+
 :root {
     --archive-article-bg: var(--white);
 }
@@ -9,5 +11,5 @@
 }
 
 .archive-description {
-    @include text-width;
+    @include mixins.text-width;
 }

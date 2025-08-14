@@ -1,7 +1,5 @@
 <?php
 /**
- * Healthmasters theme by Fanagalo Theme Customizer
- *
  * @package Fanagalo_underscores_core
  */
 
@@ -50,6 +48,6 @@ function eiklinde_fngl_2021_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function eiklinde_fngl_2021_customize_preview_js() {
-	wp_enqueue_script( 'eiklinde-fngl-2021-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'eiklinde-fngl-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'eiklinde_fngl_2021_customize_preview_js' );

@@ -1,3 +1,5 @@
+@use "../1-global-variables/width" as mq;
+
 /* Variables */
 
 :root {
@@ -24,7 +26,7 @@ body {
     grid-template-rows: auto auto 1fr auto auto;
 }
 
-@media screen and (min-width: $mq-medium) {
+@media screen and (min-width: #{mq.$mq-medium}) {
     body {
         grid-template-rows: auto 1fr auto auto;
         grid-template-columns: auto 800px auto;
@@ -32,13 +34,12 @@ body {
     }
 }
 
-@media screen and (min-width: $mq-large) {
+@media screen and (min-width: #{mq.$mq-large}) {
     body {
         grid-template-columns: auto 120px 800px 120px auto;
         grid-template-areas: " . header  header  header . " " main-left main main main main-right " " aside-left aside aside aside aside-right " " . footer footer footer . ";
     }
 }
-
 
 /* full width backgrounds */
 
@@ -47,7 +48,6 @@ body {
     grid-column: 1 / -1;
     z-index: -1;
 }
-
 
 /* header */
 
@@ -75,7 +75,7 @@ body {
     justify-self: right;
 }
 
-@media screen and (min-width: $mq-medium) {
+@media screen and (min-width: #{mq.$mq-medium}) {
     .header-area {
         grid-template-columns: 200px auto;
         grid-template-rows: auto auto;
@@ -92,11 +92,11 @@ body {
     }
 }
 
-
 /* main */
 
 .main-left {
-    background: url('images/background-gradient-left.svg') right repeat-y, var(--white);
+    background: url("assets/images/background-gradient-left.svg") right repeat-y,
+        var(--white);
     grid-area: main-left;
 }
 
@@ -106,16 +106,17 @@ body {
 }
 
 .main-right {
-    background: url('images/background-gradient-right.svg') left repeat-y, var(--white);
+    background: url("assets/images/background-gradient-right.svg") left repeat-y,
+        var(--white);
     grid-area: main-right;
 }
-
 
 /* sidebar */
 
 .sidebar-left {
     background: #f00;
-    background: url('images/background-gradient-left.svg') right repeat-y, var(--white);
+    background: url("assets/images/background-gradient-left.svg") right repeat-y,
+        var(--white);
     grid-area: aside-left;
 }
 
@@ -125,10 +126,10 @@ body {
 }
 
 .sidebar-right {
-    background: url('images/background-gradient-right.svg') left repeat-y, var(--white);
+    background: url("assets/images/background-gradient-right.svg") left repeat-y,
+        var(--white);
     grid-area: aside-right;
 }
-
 
 /* footer */
 

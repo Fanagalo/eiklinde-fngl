@@ -1,3 +1,5 @@
+@use "../../1-global-variables/width" as mq;
+
 :root {
     --post-thumbnail-height-desktop: 500px;
     --post-thumbnail-height-tablet: 400px;
@@ -26,7 +28,7 @@
     }
 }
 
-@media only screen and (min-width: $mq-large) {
+@media only screen and (min-width: #{mq.$mq-large}) {
     .single .post-thumbnail,
     .page .post-thumbnail {
         height: var(--post-thumbnail-height-desktop);

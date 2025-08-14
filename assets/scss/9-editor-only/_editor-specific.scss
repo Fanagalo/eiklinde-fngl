@@ -1,7 +1,8 @@
+@use "../2-mixins-functions/mixins" as mixins;
+
 :root {
     --editor-background-color: var(--white);
 }
-
 
 /* Background color of Block Editor */
 
@@ -9,31 +10,28 @@
     background-color: var(--editor-background-color);
 }
 
-
 /**
  * Acts like a body of the editor.
  * Give more specifity to overwrite Core style.
  */
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    @include paragraph-styling;
+    @include mixins.paragraph-styling;
     word-wrap: break-word;
     background: var(--main-area-bg);
 }
-
 
 /* Post title. */
 
 .editor-post-title__block .editor-post-title__input {
     // font-family: var(--font-mono);
     // font-size: 60px;
-    @include heading-styling;
+    @include mixins.heading-styling;
     font-size: var(--font-size-title);
     line-height: var(--line-height-xl);
     min-height: auto;
     text-align: left;
 }
-
 
 /* Paragraph needs more specifity. */
 
@@ -41,7 +39,6 @@
     --font-size-lg: 32px;
     font-size: var(--font-size-lg);
 }
-
 
 /* Main column width. */
 
@@ -51,7 +48,6 @@
     max-width: var(--max-width-text);
 }
 
-
 /* Width of "wide" blocks. */
 
 .wp-block[data-align="wide"] {
@@ -59,22 +55,21 @@
     max-width: var(--max-w-lg);
 }
 
-
 /* Width of "full-wide" blocks. */
 
 .wp-block[data-align="full"] {
     max-width: none;
 }
 
-
 /* For now we need this for overwriting Core line-height.
  * Note that headings line-height is overwritten in elements/headings.css.
  */
 
-.editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(h2):not(h3) {
+.editor-rich-text__tinymce:not(.wp-block-cover-text):not(.wp-block-subhead):not(
+        h2
+    ):not(h3) {
     line-height: var(--line-height-md);
 }
-
 
 /* Search styles. */
 
@@ -107,7 +102,6 @@
     padding: 0;
 }
 
-
 /* Code. */
 
 .wp-block-code textarea {
@@ -116,10 +110,10 @@
     font-size: inherit;
 }
 
-
 /* FNGL: bullets in header right side panel */
 
-.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs>ul {
+.components-panel__header.interface-complementary-area-header.edit-post-sidebar__panel-tabs
+    > ul {
     list-style: none;
     margin: 0;
 }

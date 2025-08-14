@@ -17,7 +17,7 @@
 			<p>	Copyright <?php echo date("Y"); ?> | Fanagalo | Barokensemble Eik en Linde<br/>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'eiklinde-fngl-2021' ), 'eiklinde-fngl-2021', '<a href="https://fanagalo.nl">Jaap Wiering</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'eiklinde-fngl' ), 'eiklinde-fngl', '<a href="https://fanagalo.nl">Jaap Wiering</a>' );
 				?>
 			</p>
 		</div><!-- .footer-rights-acknowledgements -->

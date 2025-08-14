@@ -1,3 +1,5 @@
+@use "../1-global-variables/width" as mq;
+
 /* supporting code for wide and full width */
 
 .alignfull,
@@ -10,14 +12,16 @@
 @media only screen and (min-width: 664px) {
     .alignwide,
     .alignfull {
-        margin-left: calc( 2rem - ( 100vw - var(--max-width-text)) / 2);
+        margin-left: calc(2rem - (100vw - var(--max-width-text)) / 2);
     }
 }
 
-@media only screen and (min-width: $mq-large) {
+@media only screen and (min-width: #{mq.$mq-large}) {
     .alignwide {
         width: calc(var(--max-width-container) - 4rem);
-        margin-left: calc( 2rem - ( ( var(--max-width-container) - var(--max-width-text)) / 2));
+        margin-left: calc(
+            2rem - ((var(--max-width-container) - var(--max-width-text)) / 2)
+        );
         margin-right: initial;
     }
 }

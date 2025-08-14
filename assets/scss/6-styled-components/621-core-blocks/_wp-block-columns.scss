@@ -1,8 +1,9 @@
+@use "../../1-global-variables/width" as mq;
+
 .wp-block-columns {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    ;
 }
 
 @media (min-width: 782px) {
@@ -21,7 +22,6 @@
     word-break: break-word;
     overflow-wrap: break-word;
 }
-
 
 /*
 $mq-small: 450px;
@@ -57,13 +57,13 @@ $mq-medium: 800px;
 }
 */
 
-@media (max-width: $mq-small) {
+@media (max-width: #{mq.$mq-small}) {
     .wp-block-column {
         flex-basis: 100% !important;
     }
 }
 
-@media (min-width: $mq-small) and (max-width: $mq-medium) {
+@media (min-width: #{mq.$mq-small}) and (max-width: #{mq.$mq-medium}) {
     .wp-block-column {
         flex-basis: calc(50% - 16px) !important;
         flex-grow: 0;
@@ -73,7 +73,7 @@ $mq-medium: 800px;
     }
 }
 
-@media (min-width: $mq-small) {
+@media (min-width: #{mq.$mq-small}) {
     .wp-block-column {
         flex-basis: 0;
         flex-grow: 1;
@@ -85,7 +85,6 @@ $mq-medium: 800px;
         margin-left: 32px;
     }
 }
-
 
 /**
    * All Columns Alignment
@@ -102,7 +101,6 @@ $mq-medium: 800px;
 .wp-block-columns.are-vertically-aligned-bottom {
     align-items: flex-end;
 }
-
 
 /**
    * Individual Column Alignment

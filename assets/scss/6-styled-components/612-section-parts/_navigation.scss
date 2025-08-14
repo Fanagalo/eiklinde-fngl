@@ -1,3 +1,5 @@
+@use "../../1-global-variables/width" as mq;
+
 :root {
     --menu-bg-color: var(--primary-dark);
     --menu-bg-hover-color: var(--primary-light);
@@ -26,20 +28,19 @@
         list-style-type: none;
         padding: 0;
     }
-    li:hover>a {
+    li:hover > a {
         // this declares the color of the menu text when a submenu is focused
         color: var(--menu-text-color);
     }
 }
 
-
 /*
  * Mobile menu (hamburger)
  * Consider different media-query with keyword "only"
- * @media only screen and (max-width: $mq-medium) {
+ * @media only screen and (max-width: #{mq.$mq-medium}) {
  */
 
-@media screen and (max-width: $mq-medium) {
+@media screen and (max-width: #{mq.$mq-medium}) {
     #site-navigation {
         display: none; // toggle "none" to "block" to show menu permanently
         position: absolute;
@@ -64,10 +65,10 @@
             overflow: hidden;
             a {
                 display: block;
-                padding: .5rem 1rem;
+                padding: 0.5rem 1rem;
             }
         }
-        .menu>.menu-item:first-of-type {
+        .menu > .menu-item:first-of-type {
             // border-top: none;
         }
         .sub-menu {
@@ -104,7 +105,7 @@
             background-color: transparent;
             border: none;
             outline: none;
-            padding: 0 .5rem 0rem 1rem;
+            padding: 0 0.5rem 0rem 1rem;
             text-align: center;
             cursor: pointer;
             z-index: 999;
@@ -128,7 +129,7 @@
             }
         }
         .sub-menu .sub-menu-toggle {
-            padding: 0 .5rem 0 0;
+            padding: 0 0.5rem 0 0;
         }
         .menu-item-has-children {
             display: grid;
@@ -155,7 +156,7 @@
  * Desktop menu 
  */
 
-@media only screen and (min-width: $mq-medium) {
+@media only screen and (min-width: #{mq.$mq-medium}) {
     .nav-area {
         .menu-toggle,
         .sub-menu-toggle {
@@ -165,7 +166,7 @@
             margin: 0 auto;
             max-width: var(--max-width-container);
         }
-        .menu>.menu-item {
+        .menu > .menu-item {
             display: inline-block;
         }
         .menu-item {
@@ -174,7 +175,7 @@
             a {
                 color: var(--paragraph-color);
                 display: inline-block;
-                padding: .5em 1em .5em 1em;
+                padding: 0.5em 1em 0.5em 1em;
                 font-size: var(--menu-font-size);
                 line-height: var(--line-height-xs);
             }
@@ -185,12 +186,12 @@
             background-color: var(--menu-bg-hover-color);
             color: var(--menu-text-hover-color) !important;
         }
-        .menu>.menu-item-has-children>a::after {
+        .menu > .menu-item-has-children > a::after {
             content: " \f107";
             font-family: FontAwesome;
             line-height: 1;
         }
-        .menu>.menu-item-has-children:hover>.sub-menu {
+        .menu > .menu-item-has-children:hover > .sub-menu {
             background: var(--menu-bg-hover-color);
             display: block;
             margin-left: 0;
@@ -204,7 +205,7 @@
             a {
                 color: var(--paragraph-color);
                 font-size: var(--submenu-font-size);
-                padding: .5em 1em .5em 1em;
+                padding: 0.5em 1em 0.5em 1em;
             }
             .menu-item,
             .sub-menu {

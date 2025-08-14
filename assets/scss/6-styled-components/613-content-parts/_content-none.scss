@@ -1,5 +1,7 @@
+@use "../../2-mixins-functions/mixins" as mixins;
+
 .no-results,
 .not-found {
-    @include text-width;
+    @include mixins.text-width;
     margin-bottom: 2rem;
 }
