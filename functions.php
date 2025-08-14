@@ -170,12 +170,13 @@ function eiklinde_fngl_2021_scripts() {
 		wp_deregister_style( 'wp-block-library-theme' );
 		wp_register_style( 'wp-block-library-theme', '' );
 
-		// Enable custom frontend styles; 'style' refers to style.css
-		wp_enqueue_style( 'style', get_stylesheet_uri() );
+	// Enable custom frontend styles; 'style' refers to style.css
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	// wp_enqueue_style('style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 
 	// Script for responsive mobile menu
 	// source: https://www.customyou.nl/responsive-menu-wordpress-clean-tutorial/
-		wp_enqueue_script( 'nav-menu.js', get_template_directory_uri() . '/assets/js/nav-menu.js', array('jquery'), '20151111', true );
+	wp_enqueue_script( 'nav-menu.js', get_template_directory_uri() . '/assets/js/nav-menu.js', array('jquery'), '20151111', true );
 
 	// Helps with accessibility for keyboard only users. Original from _s
 		wp_enqueue_script( 'eiklinde-fngl-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
