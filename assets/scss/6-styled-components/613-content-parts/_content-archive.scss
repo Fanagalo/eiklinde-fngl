@@ -2,7 +2,8 @@
 @use "../../2-mixins-functions/mixins" as mixins;
 
 :root {
-    --archive-post-border: 1px solid var(--grey-lighter);
+    // --archive-post-border: 1px solid var(--grey-lighter);
+    --archive-post-border: 0;
     --archive-post-background: var(--white);
     --archive-post-hover-shadow: 0 0 12px var(--eiklinde-paars);
 }
