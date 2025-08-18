@@ -8,14 +8,14 @@
 
 .wp-block-columns {
     display: flex;
-    flex-flow: wrap column;
+    flex-flow: wrap row;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 @media (min-width: #{mq.$mq-medium}) {
     .wp-block-columns {
-        flex-flow: nowrap row;
+        flex-wrap: nowrap;
     }
 }
 
@@ -41,6 +41,9 @@
         flex-basis: calc(50% - 16px) !important;
         flex-grow: 0;
     }
+    .wp-block-column:nth-child(even) {
+        margin-left: 32px;
+    }
 }
 
 @media (min-width: #{mq.$mq-small}) {
@@ -50,6 +53,9 @@
     }
     .wp-block-column[style] {
         flex-grow: 0;
+    }
+    .wp-block-column:not(:first-child) {
+        // margin-left: 32px;
     }
 }
 

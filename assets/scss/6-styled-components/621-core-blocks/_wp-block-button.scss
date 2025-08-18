@@ -35,7 +35,10 @@
 }
 
 .wp-gs .wp-block-button__link:not(.has-background) {
-    background-color: var(--wp-block-core-button--color--background, var(--wp-color--primary, #32373c));
+    background-color: var(
+        --wp-block-core-button--color--background,
+        var(--wp-color--primary, #32373c)
+    );
 }
 
 .is-style-squared .wp-block-button__link {
@@ -57,8 +60,8 @@
 
 .wp-block-buttons .wp-block-button {
     display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    // margin-right: 8px;
+    // margin-bottom: 8px;
 }
 
 .wp-block-buttons.alignright .wp-block-button {
