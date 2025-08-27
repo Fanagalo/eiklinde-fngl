@@ -927,9 +927,9 @@ main {
 }
 
 :root {
-  --post-thumbnail-height-desktop: 500px;
-  --post-thumbnail-height-tablet: 400px;
-  --post-thumbnail-height-smartphone: 300px;
+  --post-thumbnail-height-desktop: 800px;
+  --post-thumbnail-height-tablet: 600px;
+  --post-thumbnail-height-smartphone: 400px;
 }
 
 .post-thumbnail img {
@@ -937,6 +937,8 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .single .post-thumbnail,
