@@ -3803,74 +3803,6 @@ p.has-text-color a {
   text-align: center;
 }
 
-/**
- *  Custom code written for plugin The Events Calendar Pro 5.2.1.1 by Modern Tribe, Inc.
- *  
- *  Settings on Basic Styles
- *  Plugin template files heavily modified in <theme>/tribe/events/v2
- */
-/* Archive of concerts, starting point: list.php */
-.post-type-archive-tribe_events main {
-  margin: 2rem 2rem 0 2rem;
-}
-
-.post-type-archive-tribe_events .article-header {
-  display: none;
-}
-
-.post-type-archive-tribe_events main article {
-  margin: 0 auto 2rem auto;
-  max-width: var(--max-width-text);
-}
-
-.tribe-events-calendar-list__event-details {
-  border: 1px solid var(--grey-lighter);
-  padding: 1rem;
-}
-
-.tribe-events-calendar-list__event-datetime {
-  color: var(--diap-color);
-}
-.tribe-events-calendar-list__event-datetime .tribe-event-date-start {
-  display: inline;
-  color: var(--paragraph-color);
-}
-
-.fngl-tribe-hack-categories a {
-  background-color: var(--eiklinde-paars);
-  display: inline;
-  margin-right: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: var(--line-height-paragraph);
-  font-size: var(--font-size-xs);
-  color: var(--diap-color);
-}
-.fngl-tribe-hack-categories a:hover {
-  opacity: 0.8;
-}
-
-.tribe-events-calendar-list__event-title a {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-large);
-  font-weight: var(--font-weight-bold);
-  color: var(--eiklinde-paars);
-  text-decoration: none;
-}
-.tribe-events-calendar-list__event-title a:hover {
-  text-decoration: underline;
-}
-
-.tribe-events-calendar-list__event-venue-title {
-  font-weight: var(--font-weight-bold);
-  margin-right: 0.25rem;
-}
-
-.tribe-events-calendar-list__event-description p {
-  margin: 0;
-}
-
 #cookie-notice {
   background-color: var(--eiklinde-blauw) !important;
   width: calc(100vw - 6rem);
@@ -3955,10 +3887,10 @@ p.has-text-color a {
 }
 
 .fngl-em-concert {
-  border: var(--grey-lighter) 1px solid;
+  background-color: var(--white);
   display: grid;
-  grid-template-columns: 5rem auto;
   grid-template-rows: auto auto;
+  grid-template-columns: 5rem auto;
   gap: 0.5rem;
   align-items: start;
   padding: 0.5rem;
@@ -3966,6 +3898,12 @@ p.has-text-color a {
 }
 .fngl-em-concert p {
   margin-bottom: 0;
+}
+
+/* thumbnail */
+.fngl-em-thumb-block {
+  grid-row: span 3;
+  justify-self: end;
 }
 
 /* category block */
