@@ -23,6 +23,10 @@
     padding: 20px 30px;
 }
 
+.wp-block-columns.is-layout-flex {
+    align-items: flex-start !important;
+}
+
 .wp-block-column {
     flex-grow: 1;
     min-width: 0;

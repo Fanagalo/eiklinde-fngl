@@ -5,7 +5,7 @@
  Author: Jaap Wiering
  Author URI: https://fanagalo.nl
  Description: Eik en Linde theme
- Version: 1.03
+ Version: 1.04
  License: GNU General Public License v2 or later
  Text Domain: eiklinde-fngl 
 */
@@ -2688,6 +2688,10 @@ section.wp-block-cover-image > h2,
 }
 .wp-block-columns.has-background {
   padding: 20px 30px;
+}
+
+.wp-block-columns.is-layout-flex {
+  align-items: flex-start !important;
 }
 
 .wp-block-column {
