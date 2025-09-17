@@ -3924,7 +3924,7 @@ p.has-text-color a {
 
 /* thumbnail */
 .fngl-em-thumb-block {
-  grid-row: span 3;
+  grid-column: span 2;
   justify-self: end;
 }
 
