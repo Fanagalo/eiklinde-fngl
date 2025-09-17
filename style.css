@@ -812,7 +812,7 @@ main {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 50px;
-  padding: 2px 0.5rem 2px 0.5rem;
+  padding: 4px 0.5rem 3px 0.5rem;
   line-height: var(--line-height-xxs);
   background-color: var(--grey-lightest);
   color: var(--paragraph-color);
@@ -1610,7 +1610,7 @@ a.archive-post-readmore {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 50px;
-  padding: 2px 0.5rem 2px 0.5rem;
+  padding: 4px 0.5rem 3px 0.5rem;
   line-height: var(--line-height-xxs);
   background-color: var(--eiklinde-rood);
 }
@@ -2667,6 +2667,24 @@ section.wp-block-cover-image > h2,
 
 .wp-block-buttons.aligncenter {
   text-align: center;
+}
+
+.em.pixelbones a .button-small {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-sub);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 4px 0.5rem 3px 0.5rem;
+  line-height: var(--line-height-xxs);
+  background-color: var(--eiklinde-rood);
+  color: var(--white);
+}
+
+.em.pixelbones a:hover .button-small,
+.em.pixelbones a:focus .button-small {
+  color: var(--white) !important;
+  background-color: var(--tertiary-dark) !important;
 }
 
 /**

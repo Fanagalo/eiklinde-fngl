@@ -1,3 +1,5 @@
+@use "../../2-mixins-functions/mixins" as mixins;
+
 .wp-block-button {
     color: #fff;
 }
@@ -71,4 +73,16 @@
 
 .wp-block-buttons.aligncenter {
     text-align: center;
+}
+
+.em.pixelbones a .button-small {
+    @include mixins.small-button;
+    background-color: var(--eiklinde-rood);
+    color: var(--white);
+}
+
+.em.pixelbones a:hover .button-small,
+.em.pixelbones a:focus .button-small {
+    color: var(--white) !important;
+    background-color: var(--tertiary-dark) !important;
 }
