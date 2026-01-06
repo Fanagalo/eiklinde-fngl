@@ -15,4 +15,7 @@ aside .mailpoet_form {
             background-color: var(--primary-lighter);
         }
     }
+    input[type="text"] {
+        width: 100% !important;
+    }
 }

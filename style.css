@@ -4113,6 +4113,9 @@ aside .mailpoet_form input[type=submit] {
 aside .mailpoet_form input[type=submit]:hover {
   background-color: var(--primary-lighter);
 }
+aside .mailpoet_form input[type=text] {
+  width: 100% !important;
+}
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
