@@ -4095,6 +4095,25 @@ Following shortcode in shortcode-block placed within a group-block with class="f
   border-radius: 15px;
 }
 
+aside .mailpoet_form {
+  padding: 0.5rem 0 !important;
+}
+aside .mailpoet_form label {
+  text-transform: lowercase;
+  margin-left: 2px;
+}
+aside .mailpoet_form input[type=submit] {
+  font-weight: 700;
+  font-size: var(--font-size-paragraph);
+  border-radius: 20px;
+  background-color: var(--primary-lightest);
+  width: auto !important;
+  padding: 0.75rem 1rem !important;
+}
+aside .mailpoet_form input[type=submit]:hover {
+  background-color: var(--primary-lighter);
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
