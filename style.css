@@ -5,7 +5,7 @@
  Author: Jaap Wiering
  Author URI: https://fanagalo.nl
  Description: Eik en Linde theme
- Version: 1.03
+ Version: 1.05
  License: GNU General Public License v2 or later
  Text Domain: eiklinde-fngl 
 */
@@ -31,6 +31,7 @@
   --success-color: #0b0;
   --white: #fff;
   --black: #000;
+  --background-color: #f8f8f8;
   /* synonyms */
   --diap-color: var(--white);
   /* primary tints */
@@ -115,314 +116,84 @@
 }
 
 /* Core CSS variables don't work in media queries, so use SCSS variables instead */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * Josh Comeau's Reset
+ * https://www.joshwcomeau.com/css/custom-css-reset/
  */
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
+/* 2. Remove default margin */
+* {
   margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-main {
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
+  max-width: 100%;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
+/* 7. Inherit fonts for form controls */
 input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
-input { /* 1 */
-  overflow: visible;
+textarea,
+select {
+  font: inherit;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select { /* 1 */
-  text-transform: none;
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 /*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 html {
@@ -778,14 +549,14 @@ big {
 /* Variables */
 :root {
   /* layouts */
-  --general-bg: var(--white);
+  --general-bg: var(--background-color);
   /* header */
   --header-full-bg: var(--eiklinde-paars);
   --header-area-bg: var(--eiklinde-paars);
   /* menu */
   --nav-area-bg: var(--eiklinde-paars);
   /* main content */
-  --main-area-bg: var(--white);
+  --main-area-bg: var(--background-color);
   /* sidebar */
   --sidebar-area-bg: var(--eiklinde-paars);
   /* footer */
@@ -862,8 +633,14 @@ body {
   }
 }
 /* main */
+.main-left,
+.main-right,
+.sidebar-left,
+.sidebar-right {
+  background: var(--background-color);
+}
+
 .main-left {
-  background: url("assets/images/background-gradient-left.svg") right repeat-y, var(--white);
   grid-area: main-left;
 }
 
@@ -873,14 +650,11 @@ body {
 }
 
 .main-right {
-  background: url("assets/images/background-gradient-right.svg") left repeat-y, var(--white);
   grid-area: main-right;
 }
 
 /* sidebar */
 .sidebar-left {
-  background: #f00;
-  background: url("assets/images/background-gradient-left.svg") right repeat-y, var(--white);
   grid-area: aside-left;
 }
 
@@ -890,7 +664,6 @@ body {
 }
 
 .sidebar-right {
-  background: url("assets/images/background-gradient-right.svg") left repeat-y, var(--white);
   grid-area: aside-right;
 }
 
@@ -1039,7 +812,7 @@ main {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 50px;
-  padding: 2px 0.5rem 2px 0.5rem;
+  padding: 4px 0.5rem 3px 0.5rem;
   line-height: var(--line-height-xxs);
   background-color: var(--grey-lightest);
   color: var(--paragraph-color);
@@ -1154,9 +927,9 @@ main {
 }
 
 :root {
-  --post-thumbnail-height-desktop: 500px;
-  --post-thumbnail-height-tablet: 400px;
-  --post-thumbnail-height-smartphone: 300px;
+  --post-thumbnail-height-desktop: 800px;
+  --post-thumbnail-height-tablet: 600px;
+  --post-thumbnail-height-smartphone: 400px;
 }
 
 .post-thumbnail img {
@@ -1164,6 +937,8 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .single .post-thumbnail,
@@ -1342,6 +1117,7 @@ section.widget a[class^=fngl-sm-]:hover {
 
 :root {
   --archive-article-bg: var(--white);
+  --archive-article-bg: red;
 }
 
 .category main,
@@ -1706,7 +1482,7 @@ p.site-logo {
 }
 
 .footer-area {
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1761,7 +1537,7 @@ p.site-logo {
 }
 
 :root {
-  --archive-post-border: 1px solid var(--grey-lighter);
+  --archive-post-border: 0;
   --archive-post-background: var(--white);
   --archive-post-hover-shadow: 0 0 12px var(--eiklinde-paars);
 }
@@ -1834,7 +1610,7 @@ a.archive-post-readmore {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 50px;
-  padding: 2px 0.5rem 2px 0.5rem;
+  padding: 4px 0.5rem 3px 0.5rem;
   line-height: var(--line-height-xxs);
   background-color: var(--eiklinde-rood);
 }
@@ -2882,8 +2658,6 @@ section.wp-block-cover-image > h2,
 
 .wp-block-buttons .wp-block-button {
   display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 8px;
 }
 
 .wp-block-buttons.alignright .wp-block-button {
@@ -2895,19 +2669,47 @@ section.wp-block-cover-image > h2,
   text-align: center;
 }
 
+.em.pixelbones a .button-small {
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-sub);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 4px 0.5rem 3px 0.5rem;
+  line-height: var(--line-height-xxs);
+  background-color: var(--eiklinde-rood);
+  color: var(--white);
+}
+
+.em.pixelbones a:hover .button-small,
+.em.pixelbones a:focus .button-small {
+  color: var(--white) !important;
+  background-color: var(--tertiary-dark) !important;
+}
+
+/**
+ * $mq-small: 450px;
+ * $mq-medium: 800px;
+ * $mq-large: 1040px;
+ */
 .wp-block-columns {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: wrap column;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 800px) {
   .wp-block-columns {
-    flex-wrap: nowrap;
+    flex-flow: nowrap row;
   }
 }
 .wp-block-columns.has-background {
   padding: 20px 30px;
+}
+
+.wp-block-columns.is-layout-flex {
+  align-items: flex-start !important;
 }
 
 .wp-block-column {
@@ -2917,39 +2719,6 @@ section.wp-block-cover-image > h2,
   overflow-wrap: break-word;
 }
 
-/*
-$mq-small: 450px;
-$mq-medium: 800px;
-
-@media (max-width: 599px) {
-    .wp-block-column {
-        flex-basis: 100% !important;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 781px) {
-    .wp-block-column {
-        flex-basis: calc(50% - 16px) !important;
-        flex-grow: 0;
-    }
-    .wp-block-column:nth-child(even) {
-        margin-left: 32px;
-    }
-}
-
-@media (min-width: 782px) {
-    .wp-block-column {
-        flex-basis: 0;
-        flex-grow: 1;
-    }
-    .wp-block-column[style] {
-        flex-grow: 0;
-    }
-    .wp-block-column:not(:first-child) {
-        margin-left: 32px;
-    }
-}
-*/
 @media (max-width: 450px) {
   .wp-block-column {
     flex-basis: 100% !important;
@@ -2960,9 +2729,6 @@ $mq-medium: 800px;
     flex-basis: calc(50% - 16px) !important;
     flex-grow: 0;
   }
-  .wp-block-column:nth-child(even) {
-    margin-left: 32px;
-  }
 }
 @media (min-width: 450px) {
   .wp-block-column {
@@ -2972,13 +2738,8 @@ $mq-medium: 800px;
   .wp-block-column[style] {
     flex-grow: 0;
   }
-  .wp-block-column:not(:first-child) {
-    margin-left: 32px;
-  }
 }
-/**
-   * All Columns Alignment
-   */
+/* All Columns Alignment */
 .wp-block-columns.are-vertically-aligned-top {
   align-items: flex-start;
 }
@@ -2991,9 +2752,7 @@ $mq-medium: 800px;
   align-items: flex-end;
 }
 
-/**
-   * Individual Column Alignment
-   */
+/* Individual Column Alignment */
 .wp-block-column.is-vertically-aligned-top {
   align-self: flex-start;
 }
@@ -4066,74 +3825,6 @@ p.has-text-color a {
   text-align: center;
 }
 
-/**
- *  Custom code written for plugin The Events Calendar Pro 5.2.1.1 by Modern Tribe, Inc.
- *  
- *  Settings on Basic Styles
- *  Plugin template files heavily modified in <theme>/tribe/events/v2
- */
-/* Archive of concerts, starting point: list.php */
-.post-type-archive-tribe_events main {
-  margin: 2rem 2rem 0 2rem;
-}
-
-.post-type-archive-tribe_events .article-header {
-  display: none;
-}
-
-.post-type-archive-tribe_events main article {
-  margin: 0 auto 2rem auto;
-  max-width: var(--max-width-text);
-}
-
-.tribe-events-calendar-list__event-details {
-  border: 1px solid var(--grey-lighter);
-  padding: 1rem;
-}
-
-.tribe-events-calendar-list__event-datetime {
-  color: var(--diap-color);
-}
-.tribe-events-calendar-list__event-datetime .tribe-event-date-start {
-  display: inline;
-  color: var(--paragraph-color);
-}
-
-.fngl-tribe-hack-categories a {
-  background-color: var(--eiklinde-paars);
-  display: inline;
-  margin-right: 0.25rem;
-  padding: 0.125rem 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: var(--line-height-paragraph);
-  font-size: var(--font-size-xs);
-  color: var(--diap-color);
-}
-.fngl-tribe-hack-categories a:hover {
-  opacity: 0.8;
-}
-
-.tribe-events-calendar-list__event-title a {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-large);
-  font-weight: var(--font-weight-bold);
-  color: var(--eiklinde-paars);
-  text-decoration: none;
-}
-.tribe-events-calendar-list__event-title a:hover {
-  text-decoration: underline;
-}
-
-.tribe-events-calendar-list__event-venue-title {
-  font-weight: var(--font-weight-bold);
-  margin-right: 0.25rem;
-}
-
-.tribe-events-calendar-list__event-description p {
-  margin: 0;
-}
-
 #cookie-notice {
   background-color: var(--eiklinde-blauw) !important;
   width: calc(100vw - 6rem);
@@ -4218,10 +3909,10 @@ p.has-text-color a {
 }
 
 .fngl-em-concert {
-  border: var(--grey-lighter) 1px solid;
+  background-color: var(--white);
   display: grid;
-  grid-template-columns: 5rem auto;
   grid-template-rows: auto auto;
+  grid-template-columns: 5rem auto;
   gap: 0.5rem;
   align-items: start;
   padding: 0.5rem;
@@ -4229,6 +3920,12 @@ p.has-text-color a {
 }
 .fngl-em-concert p {
   margin-bottom: 0;
+}
+
+/* thumbnail */
+.fngl-em-thumb-block {
+  grid-column: span 2;
+  justify-self: end;
 }
 
 /* category block */
@@ -4369,6 +4066,56 @@ Following shortcode in shortcode-block placed within a group-block with class="f
 }
 .fngl-em-home .fngl-em-concert:hover {
   box-shadow: var(--fngl-recent-posts-hover-shadow);
+}
+
+/* concert selection in archive component */
+.concert-selection {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem 0.5rem;
+  margin-bottom: 2rem;
+}
+.concert-selection :visited {
+  color: white;
+}
+.concert-selection :hover {
+  color: var(--a-hover-color);
+}
+
+.concert-select {
+  background-color: var(--eiklinde-blauw);
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-sub);
+  padding: 2px 1rem;
+  height: 30px;
+  border-radius: 15px;
+}
+
+aside .mailpoet_form {
+  padding: 0.5rem 0 !important;
+}
+aside .mailpoet_form label {
+  text-transform: lowercase;
+  margin-left: 2px;
+}
+aside .mailpoet_form input[type=submit] {
+  font-weight: 700;
+  font-size: var(--font-size-paragraph);
+  border-radius: 20px;
+  background-color: var(--primary-lightest);
+  width: auto !important;
+  padding: 0.75rem 1rem !important;
+}
+aside .mailpoet_form input[type=submit]:hover {
+  background-color: var(--primary-lighter);
+}
+aside .mailpoet_form input[type=text],
+aside .mailpoet_form input[type=email] {
+  width: 100% !important;
 }
 
 /* Text meant only for screen readers. */

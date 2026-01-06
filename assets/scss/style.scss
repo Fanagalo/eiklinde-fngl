@@ -4,7 +4,7 @@
  Author: Jaap Wiering
  Author URI: https://fanagalo.nl
  Description: Eik en Linde theme
- Version: 1.03
+ Version: 1.05
  License: GNU General Public License v2 or later
  Text Domain: eiklinde-fngl 
 */
@@ -106,9 +106,10 @@
 
 @forward "6-styled-components/640-shortcodes/_fngl_recent_posts.scss";
 
-@forward "6-styled-components/650-vendor/_the-events-calendar.scss";
+// @forward "6-styled-components/650-vendor/_the-events-calendar.scss";
 @forward "6-styled-components/650-vendor/_cookie-notice.scss";
 @forward "6-styled-components/650-vendor/_events-manager.scss";
+@forward "6-styled-components/650-vendor/mailpoet.scss";
 
 @forward "7-overrides/_accessibility.scss";
 @forward "7-overrides/_align-left-center-right.scss";

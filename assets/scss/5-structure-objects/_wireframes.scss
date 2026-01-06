@@ -4,14 +4,14 @@
 
 :root {
     /* layouts */
-    --general-bg: var(--white);
+    --general-bg: var(--background-color);
     /* header */
     --header-full-bg: var(--eiklinde-paars);
     --header-area-bg: var(--eiklinde-paars);
     /* menu */
     --nav-area-bg: var(--eiklinde-paars);
     /* main content */
-    --main-area-bg: var(--white);
+    --main-area-bg: var(--background-color);
     /* sidebar */
     --sidebar-area-bg: var(--eiklinde-paars);
     /* footer */
@@ -93,10 +93,16 @@ body {
 }
 
 /* main */
+.main-left,
+.main-right,
+.sidebar-left,
+.sidebar-right {
+    background: var(--background-color);
+}
 
 .main-left {
-    background: url("assets/images/background-gradient-left.svg") right repeat-y,
-        var(--white);
+    // background: url("assets/images/background-gradient-left.svg") right repeat-y,
+    //    var(--white);
     grid-area: main-left;
 }
 
@@ -106,17 +112,16 @@ body {
 }
 
 .main-right {
-    background: url("assets/images/background-gradient-right.svg") left repeat-y,
-        var(--white);
+    // background: url("assets/images/background-gradient-right.svg") left repeat-y,
+    //     var(--white);
     grid-area: main-right;
 }
 
 /* sidebar */
 
 .sidebar-left {
-    background: #f00;
-    background: url("assets/images/background-gradient-left.svg") right repeat-y,
-        var(--white);
+    // background: url("assets/images/background-gradient-left.svg") right repeat-y,
+    //     var(--white);
     grid-area: aside-left;
 }
 
@@ -126,8 +131,8 @@ body {
 }
 
 .sidebar-right {
-    background: url("assets/images/background-gradient-right.svg") left repeat-y,
-        var(--white);
+    // background: url("assets/images/background-gradient-right.svg") left repeat-y,
+    //     var(--white);
     grid-area: aside-right;
 }
 
